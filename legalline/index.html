@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegalLine Chambers — Corporate Law, Tax Arbitration & Asset Protection</title>
+<meta name="description" content="Elite Advocates for International Business, IP Protection & Cross-Border Disputes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0f172a;
+    --primary-glow: rgba(15, 23, 42, 0.15);
+    --accent: #b45309;
+    --accent-bright: #d97706;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --border: #cbd5e1;
+    --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+    --hero-grad: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #090d16 100%);
+    --font-heading: 'Cinzel', Georgia, serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+    --primary: #f8fafc;
+    --primary-glow: rgba(248, 250, 252, 0.2);
+    --accent: #f59e0b;
+    --accent-bright: #fbbf24;
+    --bg: #0a0d14;
+    --surface: #121722;
+    --surface-2: #1b2233;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #273248;
+    --shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
+    --hero-grad: linear-gradient(135deg, #0a0d14 0%, #141b2a 60%, #000000 100%);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, .brand-font {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+/* Top Portfolio Bar */
+
+.hub-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+.hub-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-x: auto;
+    padding-bottom: 2px;
+}
+.hub-pill {
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.hub-pill:hover {
+    background: rgba(56, 189, 248, 0.25);
+    color: #fff;
+}
+.hub-pill.active {
+    background: #0284c7;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Main Navigation */
+.main-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 37px;
+    z-index: 990;
+    transition: background-color 0.3s;
+}
+.nav-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 14px var(--primary-glow);
+}
+.logo-text {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text);
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    list-style: none;
+}
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.theme-btn {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s;
+}
+.theme-btn:hover {
+    border-color: var(--primary);
+}
+.btn-cta {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px var(--primary-glow);
+    border: none;
+    cursor: pointer;
+}
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 4rem 1.5rem 5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+.hero-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    background: var(--surface-2);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+}
+.hero-title {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    line-height: 1.08;
+}
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+.hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+.btn-sec {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.65rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.btn-sec:hover {
+    border-color: var(--primary);
+}
+.hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border);
+}
+.stat-num {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+.hero-visual-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+.hero-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.hero-visual-card:hover .hero-img {
+    transform: scale(1.03);
+}
+.hero-float-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.2rem;
+    border-radius: 12px;
+    color: #ffffff;
+}
+.hero-float-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.hero-float-sub {
+    font-size: 0.8rem;
+    color: #cbd5e1;
+}
+
+/* Sections General */
+.section {
+    padding: 5rem 1.5rem;
+}
+.section-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.sec-head {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+}
+.sec-badge {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    background: var(--surface-2);
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.sec-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.85rem;
+}
+.sec-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+/* Services Grid */
+.svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.svc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.svc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px var(--primary-glow);
+}
+.svc-img-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+.svc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.svc-card:hover .svc-img {
+    transform: scale(1.08);
+}
+.svc-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.svc-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.svc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+}
+.svc-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+.svc-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+.svc-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+.btn-sm {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-sm:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* Interactive Calculator */
+.calc-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+}
+.calc-box {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+}
+.calc-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.calc-option:hover {
+    border-color: var(--primary);
+}
+.calc-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    margin-right: 0.85rem;
+}
+.calc-opt-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+    flex-grow: 1;
+}
+.calc-opt-price {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+.calc-summary-card {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+.calc-total-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+.calc-total-val {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.calc-sub-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+}
+
+/* Testimonials */
+.test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.test-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+.test-stars {
+    color: #eab308;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.test-quote {
+    font-size: 1rem;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.test-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.test-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+.test-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.test-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Footer & Rommark.Dev Branding */
+footer {
+    background: #0b1120;
+    color: #f8fafc;
+    padding: 4rem 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.footer-brand h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+.footer-brand p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    max-width: 320px;
+}
+.footer-col h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-col ul a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+.footer-col ul a:hover {
+    color: #38bdf8;
+}
+.portfolio-badge-footer {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+.badge-dev {
+    display: inline-block;
+    color: #38bdf8;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.badge-pitch {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+.btn-hire {
+    display: inline-block;
+    background: #0284c7;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+}
+.btn-hire:hover {
+    background: #0369a1;
+}
+.footer-bot {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Booking Dialog */
+dialog {
+    border: none;
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--text);
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(5px);
+}
+.dialog-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.dialog-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.dialog-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+.form-grp {
+    margin-bottom: 1.25rem;
+}
+.form-grp label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+.form-grp input, .form-grp textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+.form-grp input:focus, .form-grp textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* Toast */
+#toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #0f172a;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid var(--primary);
+    z-index: 9999;
+    transform: translateY(150%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+#toast.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .hero-container, .calc-grid, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+
+/* ==========================================================================
+   UNIFIED ROMMARK.DEV PORTFOLIO TOP SLIDER BAR
+   ========================================================================== */
+@media (max-width: 900px) {
+    .rm-hub-subtitle {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .rm-portfolio-hub-inner {
+        padding: 0.35rem 0.6rem;
+        gap: 0.4rem;
+    }
+    .rm-hub-title, .rm-hub-subtitle {
+        display: none;
+    }
+    .rm-hub-arrow {
+        display: none;
+    }
+}
+
+/* === UNIFIED ROMMARK SHOWCASE TOPBAR === */
+.rm-showcase-bar {
+    background-color: #0b0f17 !important;
+    background: #0b0f17 !important;
+    border-bottom: 1px solid #1e293b !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.rm-showcase-bar * {
+    box-sizing: border-box !important;
+}
+.rm-showcase-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    height: 48px;
+}
+.rm-showcase-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #38bdf8 !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.rm-showcase-label:hover {
+    opacity: 0.85;
+}
+.rm-showcase-label .rm-rocket {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.rm-showcase-nav-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+.rm-showcase-nav-wrapper::before,
+.rm-showcase-nav-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    z-index: 2;
+}
+.rm-showcase-nav-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+}
+.rm-showcase-nav::-webkit-scrollbar {
+    display: none;
+}
+.rm-showcase-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    background: #161f30 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+.rm-showcase-pill:hover {
+    background: #1e2c44 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+.rm-showcase-pill.active {
+    background: #ffffff !important;
+    color: #090d16 !important;
+    border-color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+.rm-showcase-hire {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.rm-showcase-hire:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+}
+@media (max-width: 640px) {
+    .rm-showcase-inner {
+        padding: 0.35rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .rm-showcase-label {
+        font-size: 0.72rem;
+    }
+    .rm-showcase-hire {
+        display: none;
+    }
+}
+/* === END UNIFIED ROMMARK SHOWCASE TOPBAR === */
+
+
+/* LegalLine Contract Simulator */
+.legal-contract-box { background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 10px; padding: 15px; margin: 15px 0; }
+.legal-sig-line { border-bottom: 2px dashed #d4af37; height: 35px; margin: 10px 0; font-family: 'Cinzel', serif; font-style: italic; color: #d4af37; display: flex; align-items: flex-end; padding-bottom: 4px; }
+
+</style>
+</head>
+<body>
+<!-- Unified Rommark.Dev Showcase Bar -->
+<aside class="rm-showcase-bar" id="rmShowcaseBar">
+    <div class="rm-showcase-inner">
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-label">
+            <span class="rm-rocket">🚀</span> ROMMARK.DEV SHOWCASE:
+        </a>
+        <div class="rm-showcase-nav-wrapper">
+            <nav class="rm-showcase-nav" id="rmShowcaseNav">
+                <a href="https://aquafix-sandy.vercel.app" class="rm-showcase-pill">🚰 AquaFix</a><a href="https://autopro-pi.vercel.app" class="rm-showcase-pill">🏎️ AutoPro</a><a href="https://glowup-bice.vercel.app" class="rm-showcase-pill">💄 GlowUp</a><a href="https://sakartvelo-homes.vercel.app" class="rm-showcase-pill">🏛️ Sakartvelo Homes</a><a href="https://dentacare-hazel.vercel.app" class="rm-showcase-pill">🦷 DentaCare</a><a href="https://legalline.vercel.app" class="rm-showcase-pill active">⚖️ LegalLine</a><a href="https://cleanpro-snowy-sigma.vercel.app" class="rm-showcase-pill">✨ CleanPro</a><a href="https://ironforge-bice.vercel.app" class="rm-showcase-pill">🏋️ IronForge</a><a href="https://sweetest-house.vercel.app" class="rm-showcase-pill">🥐 Sweetest House</a><a href="https://techfix-five.vercel.app" class="rm-showcase-pill">📱 TechFix</a>
+            </nav>
+        </div>
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-hire">Hire Developer ➔</a>
+    </div>
+</aside>
+<script>
+(function() {
+    var nav = document.getElementById("rmShowcaseNav");
+    if (nav) {
+        var active = nav.querySelector(".rm-showcase-pill.active");
+        if (active) {
+            setTimeout(function() {
+                var offset = active.offsetLeft - (nav.clientWidth / 2) + (active.clientWidth / 2);
+                nav.scrollTo({ left: Math.max(0, offset), behavior: "smooth" });
+            }, 150);
+        }
+    }
+})();
+</script>
+
+<!-- Main Header -->
+<header class="main-nav">
+    <div class="nav-inner">
+        <a href="#home" class="logo-wrap">
+            <div class="logo-icon">★</div>
+            <span class="logo-text brand-font">LegalLine Chambers</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#calculator">Price Estimator</a></li>
+            <li><a href="#reviews">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-btn" onclick="toggleTheme()">
+                <span id="theme-icon">☀️</span>
+                <span id="theme-text">Light</span>
+            </button>
+            <button class="btn-cta" onclick="openBooking('General Consultation', 'Free')">Book Now</button>
+        </div>
+    </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="hero-badge">⚖️ High Court Bar Certified — Over $60M Recovered for Clients</span>
+            <h1 class="hero-title">Uncompromising Legal Counsel & Advocacy.</h1>
+            <p class="hero-desc">Protecting enterprise assets, structuring Georgian Special International Company (1% Tax) entities, and litigating high-stakes commercial disputes.</p>
+            <div class="hero-cta-row">
+                <button class="btn-cta" onclick="openBooking('Priority Booking', 'Custom')">Get Started Today</button>
+                <a href="#calculator" class="btn-sec">Calculate Cost</a>
+            </div>
+            <div class="hero-stats-row">
+                
+        <div class="stat-box">
+            <span class="stat-num">94.6%</span>
+            <span class="stat-label">Court Case Win Rate</span>
+        </div>
+        
+        <div class="stat-box">
+            <span class="stat-num">$60M+</span>
+            <span class="stat-label">Corporate Claims Won</span>
+        </div>
+        
+        <div class="stat-box">
+            <span class="stat-num">450+</span>
+            <span class="stat-label">International Clients</span>
+        </div>
+        
+            </div>
+        </div>
+        <div class="hero-visual-card">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80" alt="LegalLine Chambers" class="hero-img">
+            <div class="hero-float-card">
+                <div class="hero-float-title">Verified Quality Excellence</div>
+                <div class="hero-float-sub">Elite Advocates for International Business, IP Protection & Cross-Border Disputes</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section" id="services">
+    <div class="section-container">
+        <div class="sec-head">
+            <span class="sec-badge">Specialized Solutions</span>
+            <h2 class="sec-title">Engineered For Top Results</h2>
+            <p class="sec-desc">Explore our full suite of professional services delivered with transparent pricing and master certification.</p>
+        </div>
+        <div class="svc-grid">
+            
+        <div class="svc-card">
+            <div class="svc-img-wrap">
+                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="International Business & 1% Tax Setup" loading="lazy" class="svc-img">
+                <span class="svc-tag">Tax Optimization</span>
+            </div>
+            <div class="svc-body">
+                <h3 class="svc-title">International Business & 1% Tax Setup</h3>
+                <p class="svc-desc">Virtual Zone Entity & International Company Status structuring with official Revenue Service compliance.</p>
+                <div class="svc-foot">
+                    <span class="svc-price">From 1200 GEL</span>
+                    <button class="btn-sm" onclick="openBooking('International Business & 1% Tax Setup', 'From 1200 GEL')">Request Service</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="svc-card">
+            <div class="svc-img-wrap">
+                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80" alt="Commercial Arbitration & Litigation" loading="lazy" class="svc-img">
+                <span class="svc-tag">Court Defense</span>
+            </div>
+            <div class="svc-body">
+                <h3 class="svc-title">Commercial Arbitration & Litigation</h3>
+                <p class="svc-desc">Fierce representation in Tbilisi City Court, Appeals Court and Supreme Court of Georgia.</p>
+                <div class="svc-foot">
+                    <span class="svc-price">From 2500 GEL</span>
+                    <button class="btn-sm" onclick="openBooking('Commercial Arbitration & Litigation', 'From 2500 GEL')">Request Service</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="svc-card">
+            <div class="svc-img-wrap">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="M&A, Real Estate Due Diligence" loading="lazy" class="svc-img">
+                <span class="svc-tag">Asset Security</span>
+            </div>
+            <div class="svc-body">
+                <h3 class="svc-title">M&A, Real Estate Due Diligence</h3>
+                <p class="svc-desc">Thorough title verification, lien searches, share purchase agreements and escrow closing.</p>
+                <div class="svc-foot">
+                    <span class="svc-price">From 1600 GEL</span>
+                    <button class="btn-sm" onclick="openBooking('M&A, Real Estate Due Diligence', 'From 1600 GEL')">Request Service</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="svc-card">
+            <div class="svc-img-wrap">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="IP, Trademark & Tech Patent Filing" loading="lazy" class="svc-img">
+                <span class="svc-tag">Intellectual Property</span>
+            </div>
+            <div class="svc-body">
+                <h3 class="svc-title">IP, Trademark & Tech Patent Filing</h3>
+                <p class="svc-desc">Sakpatenti, EUIPO and WIPO registration of software trademarks, trade secrets and brand IP.</p>
+                <div class="svc-foot">
+                    <span class="svc-price">From 950 GEL</span>
+                    <button class="btn-sm" onclick="openBooking('IP, Trademark & Tech Patent Filing', 'From 950 GEL')">Request Service</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</section>
+
+<!-- Calculator -->
+<section class="section calc-section" id="calculator">
+    <div class="section-container">
+        <div class="sec-head">
+            <span class="sec-badge">Instant Pricing</span>
+            <h2 class="sec-title">Legal Retainer & Filing Cost Calculator</h2>
+            <p class="sec-desc">Select the required services below to generate a transparent, instant estimate in Georgian Lari (GEL).</p>
+        </div>
+        <div class="calc-grid">
+            <div class="calc-box">
+                
+        <label class="calc-option">
+            <input type="checkbox" name="service_choice" value="950" data-name="Standard Company Formation + Bank Account Assist" onchange="updateCalc()">
+            <span class="calc-check"></span>
+            <span class="calc-opt-name">Standard Company Formation + Bank Account Assist</span>
+            <span class="calc-opt-price">+950 GEL</span>
+        </label>
+        
+        <label class="calc-option">
+            <input type="checkbox" name="service_choice" value="1800" data-name="Virtual Zone IT Tax Status (0% Corp Tax) Package" onchange="updateCalc()">
+            <span class="calc-check"></span>
+            <span class="calc-opt-name">Virtual Zone IT Tax Status (0% Corp Tax) Package</span>
+            <span class="calc-opt-price">+1800 GEL</span>
+        </label>
+        
+        <label class="calc-option">
+            <input type="checkbox" name="service_choice" value="1400" data-name="Comprehensive Real Estate Contract & Title Audit" onchange="updateCalc()">
+            <span class="calc-check"></span>
+            <span class="calc-opt-name">Comprehensive Real Estate Contract & Title Audit</span>
+            <span class="calc-opt-price">+1400 GEL</span>
+        </label>
+        
+        <label class="calc-option">
+            <input type="checkbox" name="service_choice" value="1200" data-name="Trademark Registration (Sakpatenti + Madrid System)" onchange="updateCalc()">
+            <span class="calc-check"></span>
+            <span class="calc-opt-name">Trademark Registration (Sakpatenti + Madrid System)</span>
+            <span class="calc-opt-price">+1200 GEL</span>
+        </label>
+        
+        <label class="calc-option">
+            <input type="checkbox" name="service_choice" value="3200" data-name="Full Litigation Counsel & Court Representation" onchange="updateCalc()">
+            <span class="calc-check"></span>
+            <span class="calc-opt-name">Full Litigation Counsel & Court Representation</span>
+            <span class="calc-opt-price">+3200 GEL</span>
+        </label>
+        
+            </div>
+            <div class="calc-summary-card">
+                <div class="calc-total-label">Estimated Total</div>
+                <div class="calc-total-val" id="calc-display">0 GEL</div>
+                <div class="calc-sub-note">Includes full warranty, parts and labor in Tbilisi.</div>
+                <button class="btn-cta" style="width: 100%;" onclick="bookEstimated()">Confirm This Estimate</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="reviews">
+    <div class="section-container">
+        <div class="sec-head">
+            <span class="sec-badge">Client Trust</span>
+            <h2 class="sec-title">What Our Clients Say</h2>
+            <p class="sec-desc">Real verified reviews from high-profile local homeowners, executives, and organizations.</p>
+        </div>
+        <div class="test-grid">
+            
+        <div class="test-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">"LegalLine structured our fintech subsidiary in Tbilisi and secured IT Virtual Zone tax exemption in under 10 business days. Seamless counsel."</p>
+            <div class="test-user">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Alexander Vance" class="test-avatar">
+                <div>
+                    <h4 class="test-name">Alexander Vance</h4>
+                    <span class="test-role">Managing Partner, Vance & Co.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-quote">"When a contractor attempted a fraudulent breach of contract claim against our logistics hub, LegalLine won the dismissal with full damages awarded."</p>
+            <div class="test-user">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="Vakhtang Maisuradze" class="test-avatar">
+                <div>
+                    <h4 class="test-name">Vakhtang Maisuradze</h4>
+                    <span class="test-role">Logistics CEO</span>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>LegalLine Chambers</h3>
+                <p>Elite Advocates for International Business, IP Protection & Cross-Border Disputes</p>
+                <p style="margin-top: 1rem; color: #64748b; font-size: 0.85rem;">📍 Rustaveli / Vake / Saburtalo, Tbilisi, Georgia</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculator">Price Calculator</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal & Info</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Quality Assurance</a></li>
+                    <li><a href="#">Service SLA</a></li>
+                </ul>
+            </div>
+            <div class="portfolio-badge-footer">
+                <span class="badge-dev">🚀 Built by Rommark.Dev</span>
+                <p class="badge-pitch">Need a high-converting, lightning-fast custom web app for your company?</p>
+                <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="btn-hire">Hire the Developer ➔</a>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div>© 2026 LegalLine Chambers. All rights reserved.</div>
+            <div>Designed & Engineered with ❤️ by <strong style="color:#38bdf8;">Rommark.Dev</strong></div>
+        </div>
+    </div>
+</footer>
+
+<!-- Booking Modal -->
+<dialog id="bookingModal">
+    <div class="dialog-head">
+        <h3 class="dialog-title" id="modalTitle">Request Service</h3>
+        <button class="dialog-close" onclick="closeBooking()">✕</button>
+    </div>
+    <form onsubmit="handleBookingSubmit(event)">
+        <div class="form-grp">
+            <label>Selected Service / Estimate</label>
+            <input type="text" id="modalService" readonly>
+        </div>
+        <div class="form-grp">
+            <label>Your Full Name</label>
+            <input type="text" required placeholder="e.g. Giorgi Latsabidze">
+        </div>
+        <div class="form-grp">
+            <label>Contact Phone (Tbilisi / Georgia)</label>
+            <input type="tel" required placeholder="+995 599 00 00 00">
+        </div>
+        <div class="form-grp">
+            <label>Notes / Address</label>
+            <textarea rows="3" placeholder="Specify your location or preferred date/time..."></textarea>
+        </div>
+        <button type="submit" class="btn-cta" style="width:100%;">Submit Priority Booking</button>
+    </form>
+</dialog>
+
+<!-- Toast Notification -->
+<div id="toast">✅ Booking request received! Our team will contact you shortly.</div>
+
+<script>
+function initTheme() {
+    var saved = localStorage.getItem('site_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeUI(saved);
+}
+
+function toggleTheme() {
+    var current = document.documentElement.getAttribute('data-theme') || 'light';
+    var next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('site_theme', next);
+    updateThemeUI(next);
+}
+
+function updateThemeUI(theme) {
+    var icon = document.getElementById('theme-icon');
+    var text = document.getElementById('theme-text');
+    if (icon && text) {
+        icon.textContent = theme === 'light' ? '☀️' : '🌙';
+        text.textContent = theme === 'light' ? 'Light' : 'Dark';
+    }
+}
+
+var currentCalcTotal = 0;
+var selectedServicesList = [];
+
+function updateCalc() {
+    var checkboxes = document.querySelectorAll('input[name="service_choice"]:checked');
+    var total = 0;
+    selectedServicesList = [];
+    checkboxes.forEach(function(cb) {
+        total += parseInt(cb.value, 10);
+        selectedServicesList.push(cb.getAttribute('data-name'));
+    });
+    currentCalcTotal = total;
+    document.getElementById('calc-display').textContent = total + ' GEL';
+}
+
+function bookEstimated() {
+    if (currentCalcTotal === 0) {
+        alert('Please select at least one service option first.');
+        return;
+    }
+    openBooking(selectedServicesList.join(' + '), currentCalcTotal + ' GEL');
+}
+
+var modal = document.getElementById('bookingModal');
+
+function openBooking(serviceName, price) {
+    document.getElementById('modalService').value = serviceName + (price ? ' (' + price + ')' : '');
+    modal.showModal();
+}
+
+function closeBooking() {
+    modal.close();
+}
+
+function handleBookingSubmit(e) {
+    e.preventDefault();
+    closeBooking();
+    showToast('✅ Priority request submitted! We will call you within 10 minutes.');
+}
+
+function showToast(msg) {
+    var toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(function() {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
+document.addEventListener('DOMContentLoaded', initTheme);
+</script>
+</body>
+</html>

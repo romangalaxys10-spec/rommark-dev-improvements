@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakartvelo Prime Realty — Luxury Estates, Penthouses & Investment Advisory</title>
+<meta name="description" content="Tbilisi & Batumi's Premier Luxury Real Estate Agency. Exclusive Vake & Vera Penthouses, Black Sea Waterfront Villas & High-Yield Portfolios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #09130e;
+    --surface: #102219;
+    --surface-2: #183326;
+    --surface-3: #224534;
+    --border: #2a523e;
+    --text: #f0fdf4;
+    --text-muted: #a7d0b8;
+    --primary: #10b981;
+    --primary-glow: rgba(16, 185, 129, 0.3);
+    --gold: #d97706;
+    --gold-glow: rgba(217, 119, 6, 0.25);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Work Sans', sans-serif;
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+    --bg: #f2f8f5;
+    --surface: #ffffff;
+    --surface-2: #e3f2ea;
+    --surface-3: #cfe7da;
+    --border: #b8dac7;
+    --text: #062416;
+    --text-muted: #3d6852;
+    --primary: #059669;
+    --primary-glow: rgba(5, 150, 105, 0.2);
+    --gold: #b45309;
+    --shadow: 0 12px 32px rgba(6, 36, 22, 0.08);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+
+.hub-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.hub-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-x: auto;
+}
+.hub-pill {
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+.hub-pill:hover {
+    background: rgba(16, 185, 129, 0.25);
+    color: #ffffff;
+}
+.hub-pill.active {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+}
+.hub-hire-btn {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    white-space: nowrap;
+}
+.hub-hire-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.main-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 37px;
+    z-index: 990;
+}
+.nav-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 16px var(--primary-glow);
+}
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: var(--font-heading);
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    list-style: none;
+}
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.nav-menu a:hover {
+    color: var(--primary);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.theme-btn {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s;
+}
+.theme-btn:hover {
+    border-color: var(--primary);
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #059669);
+    color: #ffffff;
+    padding: 0.75rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--primary-glow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+/* Real Estate Hero with Search Widget */
+.hero-estate {
+    position: relative;
+    padding: 5rem 1.5rem 6rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.hero-estate-grid {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+    align-items: center;
+}
+.estate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 9999px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+.hero-title span {
+    color: var(--primary);
+}
+.hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.2rem;
+    max-width: 580px;
+}
+.hero-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+.est-stat b {
+    display: block;
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+.est-stat span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.hero-showcase-frame {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.hero-estate-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.hero-showcase-frame:hover .hero-estate-img {
+    transform: scale(1.04);
+}
+.estate-hero-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(9, 19, 14, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Property Listings Grid */
+.listings-section {
+    padding: 6rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.listings-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+}
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+.listing-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.listing-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 16px 36px var(--primary-glow);
+}
+.listing-img-wrap {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+.listing-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.listing-card:hover .listing-img {
+    transform: scale(1.07);
+}
+.listing-pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(9, 19, 14, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+}
+.listing-content {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.listing-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.listing-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+.listing-specs {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+.listing-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.listing-price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+.btn-inquire {
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.45rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-inquire:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+/* Real Estate Yield & Investment Calculator */
+.calc-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.calc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+.calc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.4rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.calc-row:hover {
+    border-color: var(--primary);
+}
+.calc-cb {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    margin-right: 1.1rem;
+}
+.calc-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    flex-grow: 1;
+}
+.calc-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+
+.calc-summary-box {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 16px 40px var(--primary-glow);
+}
+.calc-sum-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.calc-sum-num {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.calc-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Gallery & Architecture */
+.gallery-section {
+    padding: 6rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    height: 280px;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.gallery-card:hover img {
+    transform: scale(1.07);
+}
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(9, 19, 14, 0.9) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+.gallery-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--font-heading);
+}
+
+/* Reviews */
+.reviews-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.2rem;
+}
+.review-stars {
+    color: #eab308;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.review-quote {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.review-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+/* Footer */
+.site-footer {
+    background: #040c08;
+    color: #f8fafc;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4.5rem 1.5rem 2rem;
+}
+.footer-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+}
+.f-brand-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: #ffffff;
+}
+.f-desc {
+    font-size: 0.9rem;
+    color: #a7d0b8;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+}
+.f-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.f-badge {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+.f-head {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    margin-bottom: 1.25rem;
+}
+.f-ul {
+    list-style: none;
+}
+.f-ul li {
+    margin-bottom: 0.75rem;
+}
+.f-ul a {
+    color: #a7d0b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+.f-ul a:hover {
+    color: var(--primary);
+}
+.f-hire-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.f-hire-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card p {
+    font-size: 0.82rem;
+    color: #a7d0b8;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+.f-hire-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #059669);
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.dev-attribution a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Modal & Toast */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 1.5rem;
+}
+.modal-backdrop.show {
+    display: flex;
+}
+.modal-card {
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.modal-title {
+    font-size: 1.7rem;
+    font-family: var(--font-heading);
+    color: var(--text);
+}
+.modal-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+.form-input {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+.modal-submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), #059669);
+    color: #ffffff;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.toast-card {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #09190e;
+    color: #ffffff;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1200;
+    transform: translateY(150%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toast-card.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+    .hero-estate-grid, .calc-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================================
+   UNIFIED ROMMARK.DEV PORTFOLIO TOP SLIDER BAR
+   ========================================================================== */
+@media (max-width: 900px) {
+    .rm-hub-subtitle {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .rm-portfolio-hub-inner {
+        padding: 0.35rem 0.6rem;
+        gap: 0.4rem;
+    }
+    .rm-hub-title, .rm-hub-subtitle {
+        display: none;
+    }
+    .rm-hub-arrow {
+        display: none;
+    }
+}
+
+/* === UNIFIED ROMMARK SHOWCASE TOPBAR === */
+.rm-showcase-bar {
+    background-color: #0b0f17 !important;
+    background: #0b0f17 !important;
+    border-bottom: 1px solid #1e293b !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.rm-showcase-bar * {
+    box-sizing: border-box !important;
+}
+.rm-showcase-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    height: 48px;
+}
+.rm-showcase-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #38bdf8 !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.rm-showcase-label:hover {
+    opacity: 0.85;
+}
+.rm-showcase-label .rm-rocket {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.rm-showcase-nav-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+.rm-showcase-nav-wrapper::before,
+.rm-showcase-nav-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    z-index: 2;
+}
+.rm-showcase-nav-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+}
+.rm-showcase-nav::-webkit-scrollbar {
+    display: none;
+}
+.rm-showcase-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    background: #161f30 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+.rm-showcase-pill:hover {
+    background: #1e2c44 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+.rm-showcase-pill.active {
+    background: #ffffff !important;
+    color: #090d16 !important;
+    border-color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+.rm-showcase-hire {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.rm-showcase-hire:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+}
+@media (max-width: 640px) {
+    .rm-showcase-inner {
+        padding: 0.35rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .rm-showcase-label {
+        font-size: 0.72rem;
+    }
+    .rm-showcase-hire {
+        display: none;
+    }
+}
+/* === END UNIFIED ROMMARK SHOWCASE TOPBAR === */
+
+</style>
+</head>
+<body>
+<!-- Unified Rommark.Dev Showcase Bar -->
+<aside class="rm-showcase-bar" id="rmShowcaseBar">
+    <div class="rm-showcase-inner">
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-label">
+            <span class="rm-rocket">🚀</span> ROMMARK.DEV SHOWCASE:
+        </a>
+        <div class="rm-showcase-nav-wrapper">
+            <nav class="rm-showcase-nav" id="rmShowcaseNav">
+                <a href="https://aquafix-sandy.vercel.app" class="rm-showcase-pill">🚰 AquaFix</a><a href="https://autopro-pi.vercel.app" class="rm-showcase-pill">🏎️ AutoPro</a><a href="https://glowup-bice.vercel.app" class="rm-showcase-pill">💄 GlowUp</a><a href="https://sakartvelo-homes.vercel.app" class="rm-showcase-pill active">🏛️ Sakartvelo Homes</a><a href="https://dentacare-hazel.vercel.app" class="rm-showcase-pill">🦷 DentaCare</a><a href="https://legalline.vercel.app" class="rm-showcase-pill">⚖️ LegalLine</a><a href="https://cleanpro-snowy-sigma.vercel.app" class="rm-showcase-pill">✨ CleanPro</a><a href="https://ironforge-bice.vercel.app" class="rm-showcase-pill">🏋️ IronForge</a><a href="https://sweetest-house.vercel.app" class="rm-showcase-pill">🥐 Sweetest House</a><a href="https://techfix-five.vercel.app" class="rm-showcase-pill">📱 TechFix</a>
+            </nav>
+        </div>
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-hire">Hire Developer ➔</a>
+    </div>
+</aside>
+<script>
+(function() {
+    var nav = document.getElementById("rmShowcaseNav");
+    if (nav) {
+        var active = nav.querySelector(".rm-showcase-pill.active");
+        if (active) {
+            setTimeout(function() {
+                var offset = active.offsetLeft - (nav.clientWidth / 2) + (active.clientWidth / 2);
+                nav.scrollTo({ left: Math.max(0, offset), behavior: "smooth" });
+            }, 150);
+        }
+    }
+})();
+</script>
+
+<header class="main-nav">
+    <div class="nav-inner">
+        <a href="#home" class="brand-logo">
+            <div class="logo-icon">🏛️</div>
+            <div class="logo-text">SAKARTVELO PRIME</div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#listings">Exclusive Portfolio</a></li>
+            <li><a href="#calculator">Yield Estimator</a></li>
+            <li><a href="#gallery">Architecture</a></li>
+            <li><a href="#reviews">Investor Testimonials</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-btn" onclick="toggleTheme()">
+                <span id="themeIcon">☀️</span>
+                <span id="themeLabel">Light Mode</span>
+            </button>
+            <button class="btn-primary" onclick="openBookingModal('VIP Property Consultation')">Book Private Tour</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero-estate" id="home">
+    <div class="hero-estate-grid">
+        <div class="hero-text-col">
+            <div class="estate-badge">
+                <span>🏰</span>
+                <span>EXCLUSIVE GEORGIAN REAL ESTATE & PORTFOLIO ADVISORY</span>
+            </div>
+            <h1 class="hero-title">Own Extraordinary <span>Properties</span> in Tbilisi & Batumi</h1>
+            <p class="hero-sub">Specializing in off-market Vake & Vera penthouses, Mtatsminda architectural villas, and high-yield Black Sea beachfront developments.</p>
+            <div style="display:flex;gap:1.2rem;margin-bottom:3rem;flex-wrap:wrap">
+                <button class="btn-primary" onclick="openBookingModal('Off-Market Portfolio')">Explore Off-Market Catalog ➔</button>
+                <a href="#calculator" class="btn-inquire" style="padding:0.75rem 1.6rem;font-size:0.9rem">Calculate Rental Yield</a>
+            </div>
+            
+            <div class="hero-stats-bar">
+                <div class="est-stat">
+                    <b>$450M+</b>
+                    <span>Volume Closed</span>
+                </div>
+                <div class="est-stat">
+                    <b>12.4%</b>
+                    <span>Avg ROI Yield</span>
+                </div>
+                <div class="est-stat">
+                    <b>100%</b>
+                    <span>Legal Due Diligence</span>
+                </div>
+                <div class="est-stat">
+                    <b>VIP</b>
+                    <span>Residency Support</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual-col">
+            <div class="hero-showcase-frame">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Sakartvelo Luxury Villa" class="hero-estate-img">
+                <div class="estate-hero-card">
+                    <div>
+                        <div style="font-weight:700;font-size:1.1rem">Vake Heights Penthouse</div>
+                        <div style="font-size:0.82rem;color:#a7d0b8">450m² · Panoramic Mountain Views</div>
+                    </div>
+                    <span style="font-weight:800;color:var(--primary);font-size:1.2rem">$780,000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="listings-section" id="listings">
+    <div class="listings-container">
+        <div class="section-header">
+            <div class="estate-badge" style="margin-bottom:0.75rem">CURATED PORTFOLIO</div>
+            <h2>Prime Properties For Sale & Investment</h2>
+            <p>Direct from verified developers with full legal guarantees and Georgian residency eligibility.</p>
+        </div>
+
+        <div class="listings-grid">
+            <div class="listing-card">
+                <div class="listing-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Villa Mtatsminda" class="listing-img">
+                    <span class="listing-pill">EXCLUSIVE VILLA</span>
+                </div>
+                <div class="listing-content">
+                    <h3 class="listing-title">Mtatsminda Modern Villa</h3>
+                    <p class="listing-desc">Infinity heated pool, smart home integration, and private vineyard garden over Tbilisi.</p>
+                    <div class="listing-specs">
+                        <span>📐 520 m²</span>
+                        <span>🛏️ 5 Beds</span>
+                        <span>🛁 6 Baths</span>
+                    </div>
+                    <div class="listing-foot">
+                        <span class="listing-price">$1,250,000</span>
+                        <button class="btn-inquire" onclick="openBookingModal('Mtatsminda Modern Villa')">Inquire ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listing-card">
+                <div class="listing-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Vera Sky Penthouse" class="listing-img">
+                    <span class="listing-pill">PENTHOUSE</span>
+                </div>
+                <div class="listing-content">
+                    <h3 class="listing-title">Vera Architectural Sky Loft</h3>
+                    <p class="listing-desc">Double-height 6m ceilings, imported Italian marble, wrap-around rooftop terrace.</p>
+                    <div class="listing-specs">
+                        <span>📐 280 m²</span>
+                        <span>🛏️ 3 Beds</span>
+                        <span>🛁 3.5 Baths</span>
+                    </div>
+                    <div class="listing-foot">
+                        <span class="listing-price">$540,000</span>
+                        <button class="btn-inquire" onclick="openBookingModal('Vera Architectural Sky Loft')">Inquire ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listing-card">
+                <div class="listing-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="Batumi Beachfront" class="listing-img">
+                    <span class="listing-pill">BLACK SEA HIGH YIELD</span>
+                </div>
+                <div class="listing-content">
+                    <h3 class="listing-title">Batumi Boulevard Residence</h3>
+                    <p class="listing-desc">First-line sea views with 5-star hotel management and projected 14.5% annual ROI.</p>
+                    <div class="listing-specs">
+                        <span>📐 115 m²</span>
+                        <span>🛏️ 2 Beds</span>
+                        <span>🛁 2 Baths</span>
+                    </div>
+                    <div class="listing-foot">
+                        <span class="listing-price">$220,000</span>
+                        <button class="btn-inquire" onclick="openBookingModal('Batumi Boulevard Residence')">Inquire ➔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="calc-section" id="calculator">
+    <div class="calc-grid">
+        <div class="calc-card">
+            <h3 style="font-size:2rem;margin-bottom:1.5rem;font-family:var(--font-heading)">Investment Portfolio & Yield Simulator</h3>
+            <label class="calc-row">
+                <input type="checkbox" class="calc-cb" value="120000" checked onchange="calculateEstateTotal()">
+                <span class="calc-label">Saburtalo Tech Hub 1-Bed Apartment</span>
+                <span class="calc-val">$120,000</span>
+            </label>
+            <label class="calc-row">
+                <input type="checkbox" class="calc-cb" value="220000" checked onchange="calculateEstateTotal()">
+                <span class="calc-label">Batumi Seafront 2-Bed Managed Suite</span>
+                <span class="calc-val">$220,000</span>
+            </label>
+            <label class="calc-row">
+                <input type="checkbox" class="calc-cb" value="540000" onchange="calculateEstateTotal()">
+                <span class="calc-label">Vera Prime Architectural Sky Loft</span>
+                <span class="calc-val">$540,000</span>
+            </label>
+            <label class="calc-row">
+                <input type="checkbox" class="calc-cb" value="35000" onchange="calculateEstateTotal()">
+                <span class="calc-label">Turnkey High-End Turnkey Designer Furnishing</span>
+                <span class="calc-val">$35,000</span>
+            </label>
+        </div>
+
+        <div class="calc-summary-box">
+            <span class="calc-sum-badge">TOTAL ASSET ALLOCATION</span>
+            <div class="calc-sum-num" id="estateTotal">$340,000</div>
+            <div class="calc-note">Includes complete title transfer, Georgian tax structuring, and tenancy management.</div>
+            <button class="btn-primary" style="width:100%" onclick="bookEstatePackage()">Request Full Financial Dossier ➔</button>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+    <div class="listings-container">
+        <div class="section-header">
+            <div class="estate-badge" style="margin-bottom:0.75rem">ARCHITECTURE</div>
+            <h2>Design & Material Excellence</h2>
+            <p>Modernist architecture harmonized with Georgia's breathtaking natural landscapes.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80" alt="Mountain Villa">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Kojori Forest Retreat</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Interior Design">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Travertine & Oak Living Rooms</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Luxury Estate">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Private Cascading Terraces</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+    <div class="listings-container">
+        <div class="section-header">
+            <div class="estate-badge" style="margin-bottom:0.75rem">TESTIMONIALS</div>
+            <h2>Trusted by Global Investors</h2>
+            <p>Read experiences from buyers across the UK, Germany, UAE, and the US.</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Sakartvelo Prime Realty managed our entire acquisition in Vake while we were in London. From legal due diligence to tenancy management, seamless and professional."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="James W.">
+                    <div>
+                        <div style="font-weight:700">James Winchester</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">London Investor</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"We achieved 13.8% net ROI in our first year on the Batumi waterfront units. Their property management and tax structuring are peerless."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Karin H.">
+                    <div>
+                        <div style="font-weight:700">Karin Hartmann</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Munich Real Estate Fund</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Finding an off-market villa in Mtatsminda seemed impossible until we met the team. They handled our residency paperwork in two weeks."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Tariq A.">
+                    <div>
+                        <div style="font-weight:700">Tariq Al-Mansoor</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Dubai Private Office</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <span class="f-brand-text">Sakartvelo Prime Realty</span>
+                    </div>
+                    <p class="f-desc">Next-generation digital experience crafted with bespoke layout systems, accessible modern CSS, and fluid performance.</p>
+                    <div class="f-badge-row">
+                        <span class="f-badge">⚡ Ultra Fast</span>
+                        <span class="f-badge">📱 Responsive</span>
+                        <span class="f-badge">🎨 Bespoke UI</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Explore Demos</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://aquafix-sandy.vercel.app">AquaFix Emergency Plumbing</a></li>
+                        <li><a href="https://autopro-pi.vercel.app">AutoPro German Diagnostics</a></li>
+                        <li><a href="https://glowup-bice.vercel.app">GlowUp Beauty & Hair</a></li>
+                        <li><a href="https://sakartvelo-homes.vercel.app">Sakartvelo Prime Realty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Specialty Sectors</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://dentacare-hazel.vercel.app">DentaCare Digital Clinic</a></li>
+                        <li><a href="https://legalline.vercel.app">LegalLine Chambers</a></li>
+                        <li><a href="https://cleanpro-snowy-sigma.vercel.app">CleanPro Facilities</a></li>
+                        <li><a href="https://ironforge-bice.vercel.app">IronForge Athletic Lab</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col cta-col">
+                    <div class="f-hire-card">
+                        <div class="f-hire-icon">🚀</div>
+                        <h4>Need a Website Like This?</h4>
+                        <p>Turn your local business into a high-converting digital powerhouse with custom design.</p>
+                        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="f-hire-btn">Hire the Developer ➔</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Sakartvelo Prime Realty. All rights reserved.</p>
+                <div class="dev-attribution">
+                    Designed & Engineered by <a href="https://www.rommark.dev" target="_blank" rel="noopener">Rommark.Dev</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <!-- Booking Modal -->
+    <!-- Sakartvelo Homes Private Viewing Modal -->
+    <div class="modal-backdrop" id="bookingModal" onclick="if(event.target===this)closeBookingModal()">
+        <div class="modal-card" style="max-width: 600px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title" id="modalTitle">Schedule VIP Property Tour</h3>
+                    <p class="modal-sub">Chauffeured Mercedes-Maybach Viewing & ROI Portfolio Briefing</p>
+                </div>
+                <button class="modal-close" onclick="closeBookingModal()" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <div id="realtyFormStep">
+                <form onsubmit="handleRealtySubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Estate / Penthouse Selection</label>
+                        <select class="form-input" id="realtyEstate">
+                            <option value="Vake Crown Penthouse (450 sqm, Infinity Pool)">Vake Crown Penthouse (450 sqm, Infinity Pool)</option>
+                            <option value="Mtatsminda View Villa (680 sqm, Wine Cellar)">Mtatsminda View Villa (680 sqm, Wine Cellar)</option>
+                            <option value="Batumi Riviera Sea-View Tower (Level 38)">Batumi Riviera Sea-View Tower (Level 38)</option>
+                            <option value="Old Tbilisi Heritage Mansion Restored">Old Tbilisi Heritage Mansion Restored</option>
+                        </select>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                        <div class="form-group">
+                            <label class="form-label">Investor / Buyer Name</label>
+                            <input type="text" class="form-input" id="buyerName" value="Alexandre Dumas-Loria" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Direct Phone / WhatsApp</label>
+                            <input type="tel" class="form-input" id="buyerPhone" value="+995 591 00 11 22" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="modal-submit-btn">🏛️ Reserve Private Chauffeured Inspection ➔</button>
+                </form>
+            </div>
+
+            <div id="realtySuccessStep" style="display:none; text-align:center;">
+                <div style="width:60px; height:60px; border-radius:50%; background:rgba(212,175,55,0.2); color:#d4af37; font-size:30px; display:flex; align-items:center; justify-content:center; margin: 0 auto 12px;">✓</div>
+                <h3 style="font-size:20px; margin-bottom:5px;">Private Viewing Confirmed</h3>
+                <p style="color:var(--text-muted); font-size:13px; margin-bottom:15px;">Senior Partner Broker <strong>Nata Kipiani</strong> will meet you with full deeds & yield audits.</p>
+                
+                <div style="background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:left; font-size:13px; margin-bottom:15px;">
+                    <div style="color:var(--text-muted); font-size:11px;">CONCIERGE AMENITY:</div>
+                    <div style="font-weight:700; color:#d4af37;">Private Maybach Pick-Up Arranged</div>
+                </div>
+
+                <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeBookingModal()">Done & Return</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-card" id="toastCard">
+        <span style="font-size:1.4rem">✅</span>
+        <div>
+            <div style="font-weight:700;font-size:0.95rem" id="toastTitle">Request Sent Successfully!</div>
+            <div style="font-size:0.82rem;opacity:0.85" id="toastDesc">Our specialist will contact you momentarily.</div>
+        </div>
+    </div>
+    
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('sakartvelo_theme', newTheme);
+    
+    document.getElementById('themeIcon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    document.getElementById('themeLabel').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+}
+
+function calculateEstateTotal() {
+    const checkboxes = document.querySelectorAll('.calc-cb:checked');
+    let sum = 0;
+    checkboxes.forEach(cb => {
+        sum += parseFloat(cb.value);
+    });
+    document.getElementById('estateTotal').textContent = '$' + sum.toLocaleString();
+}
+
+function bookEstatePackage() {
+    const checkboxes = document.querySelectorAll('.calc-cb:checked');
+    let items = [];
+    checkboxes.forEach(cb => {
+        items.push(cb.parentElement.querySelector('.calc-label').textContent.trim());
+    });
+    const total = document.getElementById('estateTotal').textContent;
+    openBookingModal('Investment Portfolio (' + total + '): ' + items.join(', '));
+}
+
+
+function handleRealtySubmit(e) {
+    e.preventDefault();
+    document.getElementById('realtyFormStep').style.display = 'none';
+    document.getElementById('realtySuccessStep').style.display = 'block';
+}
+
+function openBookingModal(serviceName) {
+    document.getElementById('realtyFormStep').style.display = 'block';
+    document.getElementById('realtySuccessStep').style.display = 'none';
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function _orig_openBookingModal(serviceName) {
+    document.getElementById('modalServiceInput').value = serviceName || '';
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function closeBookingModal() {
+    document.getElementById('bookingModal').classList.remove('show');
+}
+
+function handleModalSubmit(e) {
+    e.preventDefault();
+    closeBookingModal();
+    const toast = document.getElementById('toastCard');
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
+(function init() {
+    const saved = localStorage.getItem('sakartvelo_theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').textContent = saved === 'dark' ? '☀️' : '🌙';
+        document.getElementById('themeLabel').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+    calculateEstateTotal();
+})();
+</script>
+</body>
+</html>

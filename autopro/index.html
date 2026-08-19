@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoPro Dynamics — High-Performance German & Japanese Auto Engineering</title>
+<meta name="description" content="Tbilisi's Premier Bosch-Certified Garage for OEM Diagnostics, Dyno Remapping, DSG/ZF Servicing & Precision Track Tuning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #090a0f;
+    --surface: #10121a;
+    --surface-2: #181c28;
+    --surface-3: #222738;
+    --border: #272d40;
+    --text: #f3f4f6;
+    --text-muted: #94a3b8;
+    --primary: #ef4444;
+    --primary-glow: rgba(239, 68, 68, 0.35);
+    --accent: #f97316;
+    --accent-glow: rgba(249, 115, 22, 0.3);
+    --carbon-pat: radial-gradient(#1e2436 1px, transparent 1px);
+    --font-heading: 'Chakra Petch', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+    --bg: #f3f4f8;
+    --surface: #ffffff;
+    --surface-2: #e8ecf4;
+    --surface-3: #d9e0ee;
+    --border: #cbd5e1;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --primary: #dc2626;
+    --primary-glow: rgba(220, 38, 38, 0.2);
+    --accent: #ea580c;
+    --carbon-pat: radial-gradient(#cbd5e1 1px, transparent 1px);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, .font-head {
+    font-family: var(--font-heading);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+/* Portfolio Bar */
+
+.hub-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.hub-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-x: auto;
+}
+.hub-pill {
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+.hub-pill:hover {
+    background: rgba(239, 68, 68, 0.25);
+    color: #ffffff;
+}
+.hub-pill.active {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+}
+.hub-hire-btn {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    white-space: nowrap;
+}
+.hub-hire-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Navigation */
+.main-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 37px;
+    z-index: 990;
+}
+.nav-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 16px var(--primary-glow);
+}
+.logo-text {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--text);
+    font-family: var(--font-heading);
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-heading);
+    transition: color 0.2s;
+}
+.nav-menu a:hover {
+    color: var(--primary);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.theme-btn {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s;
+}
+.theme-btn:hover {
+    border-color: var(--primary);
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--primary-glow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+/* AutoPro Cockpit Hero Section */
+.hero-cockpit {
+    position: relative;
+    padding: 5rem 1.5rem 6rem;
+    background: var(--bg);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+.hero-cockpit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--carbon-pat);
+    background-size: 24px 24px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+.hero-cockpit-grid {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.tag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+}
+.hero-title {
+    font-size: 3.6rem;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+.hero-title .gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2.2rem;
+    max-width: 580px;
+}
+.hero-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+.btn-secondary {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Dynamic Telemetry Bar */
+.telemetry-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+}
+.tel-item b {
+    display: block;
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+.tel-item span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Hero Visual Showcase */
+.hero-frame-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: var(--surface);
+}
+.hero-main-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.hero-frame-card:hover .hero-main-img {
+    transform: scale(1.04);
+}
+.dyno-hud-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(9, 10, 15, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dyno-spec-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: var(--font-heading);
+}
+.dyno-spec-sub {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+.dyno-badge {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+}
+
+/* Engineering Services Section */
+.eng-section {
+    padding: 5.5rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.eng-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.section-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3.5rem;
+}
+.section-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 0.75rem;
+}
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+.service-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.matrix-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.matrix-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: 0 16px 36px var(--primary-glow);
+}
+.matrix-img-box {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+.matrix-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+.matrix-card:hover .matrix-img {
+    transform: scale(1.08);
+}
+.matrix-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(9, 10, 15, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-family: var(--font-heading);
+}
+.matrix-content {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.matrix-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+.matrix-desc {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+.matrix-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+.matrix-price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+.btn-book-sm {
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-book-sm:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+/* Interactive Dyno Stage Configurator */
+.dyno-section {
+    padding: 5.5rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+.dyno-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.dyno-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+.config-options-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.2rem;
+}
+.dyno-option-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.25rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.dyno-option-row:hover {
+    border-color: var(--primary);
+}
+.dyno-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    margin-right: 1rem;
+}
+.dyno-opt-label {
+    font-weight: 700;
+    font-size: 1rem;
+    flex-grow: 1;
+    font-family: var(--font-heading);
+}
+.dyno-opt-price {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+}
+
+.dyno-calc-result {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+    padding: 2.8rem 2rem;
+    text-align: center;
+    box-shadow: 0 16px 40px var(--primary-glow);
+}
+.calc-stage-badge {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+.dyno-total-num {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.dyno-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Performance Gallery */
+.gallery-section {
+    padding: 5.5rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    height: 260px;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.gallery-card:hover img {
+    transform: scale(1.07);
+}
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(9, 10, 15, 0.9) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+.gallery-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: var(--font-heading);
+}
+
+/* Testimonial Telemetry */
+.reviews-section {
+    padding: 5.5rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+}
+.review-car-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+.review-quote {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.review-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+/* Footer */
+.site-footer {
+    background: #06080e;
+    color: #f8fafc;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4.5rem 1.5rem 2rem;
+}
+.footer-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+}
+.f-brand-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: #ffffff;
+}
+.f-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+}
+.f-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.f-badge {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+.f-head {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    margin-bottom: 1.25rem;
+}
+.f-ul {
+    list-style: none;
+}
+.f-ul li {
+    margin-bottom: 0.75rem;
+}
+.f-ul a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+.f-ul a:hover {
+    color: var(--primary);
+}
+.f-hire-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.f-hire-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+.f-hire-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    font-family: var(--font-heading);
+    text-decoration: none;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.dev-attribution a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Modal & Toast */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 1.5rem;
+}
+.modal-backdrop.show {
+    display: flex;
+}
+.modal-card {
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.modal-title {
+    font-size: 1.5rem;
+    color: var(--text);
+}
+.modal-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+.form-input {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+.modal-submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toast-card {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #0f172a;
+    color: #ffffff;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1200;
+    transform: translateY(150%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toast-card.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+    .hero-cockpit-grid, .dyno-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .telemetry-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* ==========================================================================
+   UNIFIED ROMMARK.DEV PORTFOLIO TOP SLIDER BAR
+   ========================================================================== */
+@media (max-width: 900px) {
+    .rm-hub-subtitle {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .rm-portfolio-hub-inner {
+        padding: 0.35rem 0.6rem;
+        gap: 0.4rem;
+    }
+    .rm-hub-title, .rm-hub-subtitle {
+        display: none;
+    }
+    .rm-hub-arrow {
+        display: none;
+    }
+}
+
+/* === UNIFIED ROMMARK SHOWCASE TOPBAR === */
+.rm-showcase-bar {
+    background-color: #0b0f17 !important;
+    background: #0b0f17 !important;
+    border-bottom: 1px solid #1e293b !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.rm-showcase-bar * {
+    box-sizing: border-box !important;
+}
+.rm-showcase-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    height: 48px;
+}
+.rm-showcase-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #38bdf8 !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.rm-showcase-label:hover {
+    opacity: 0.85;
+}
+.rm-showcase-label .rm-rocket {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.rm-showcase-nav-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+.rm-showcase-nav-wrapper::before,
+.rm-showcase-nav-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    z-index: 2;
+}
+.rm-showcase-nav-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+}
+.rm-showcase-nav::-webkit-scrollbar {
+    display: none;
+}
+.rm-showcase-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    background: #161f30 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+.rm-showcase-pill:hover {
+    background: #1e2c44 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+.rm-showcase-pill.active {
+    background: #ffffff !important;
+    color: #090d16 !important;
+    border-color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+.rm-showcase-hire {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.rm-showcase-hire:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+}
+@media (max-width: 640px) {
+    .rm-showcase-inner {
+        padding: 0.35rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .rm-showcase-label {
+        font-size: 0.72rem;
+    }
+    .rm-showcase-hire {
+        display: none;
+    }
+}
+/* === END UNIFIED ROMMARK SHOWCASE TOPBAR === */
+
+
+/* AutoPro Dyno Simulator */
+.dyno-screen { background: #06080d; border: 1px solid #ff3e3e; border-radius: 12px; padding: 15px; margin: 15px 0; text-align: center; }
+.dyno-gauges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.gauge-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,62,62,0.2); border-radius: 8px; padding: 10px; }
+.gauge-val { font-size: 22px; font-weight: 900; color: #ff3e3e; font-family: 'Chakra Petch', sans-serif; }
+.gauge-label { font-size: 10px; color: #94a3b8; text-transform: uppercase; }
+.dyno-bar-wrap { height: 12px; background: #161a23; border-radius: 6px; overflow: hidden; margin-top: 10px; }
+.dyno-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #ff8c00, #ff3e3e); transition: width 0.1s linear; }
+
+</style>
+</head>
+<body>
+<!-- Unified Rommark.Dev Showcase Bar -->
+<aside class="rm-showcase-bar" id="rmShowcaseBar">
+    <div class="rm-showcase-inner">
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-label">
+            <span class="rm-rocket">🚀</span> ROMMARK.DEV SHOWCASE:
+        </a>
+        <div class="rm-showcase-nav-wrapper">
+            <nav class="rm-showcase-nav" id="rmShowcaseNav">
+                <a href="https://aquafix-sandy.vercel.app" class="rm-showcase-pill">🚰 AquaFix</a><a href="https://autopro-pi.vercel.app" class="rm-showcase-pill active">🏎️ AutoPro</a><a href="https://glowup-bice.vercel.app" class="rm-showcase-pill">💄 GlowUp</a><a href="https://sakartvelo-homes.vercel.app" class="rm-showcase-pill">🏛️ Sakartvelo Homes</a><a href="https://dentacare-hazel.vercel.app" class="rm-showcase-pill">🦷 DentaCare</a><a href="https://legalline.vercel.app" class="rm-showcase-pill">⚖️ LegalLine</a><a href="https://cleanpro-snowy-sigma.vercel.app" class="rm-showcase-pill">✨ CleanPro</a><a href="https://ironforge-bice.vercel.app" class="rm-showcase-pill">🏋️ IronForge</a><a href="https://sweetest-house.vercel.app" class="rm-showcase-pill">🥐 Sweetest House</a><a href="https://techfix-five.vercel.app" class="rm-showcase-pill">📱 TechFix</a>
+            </nav>
+        </div>
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-hire">Hire Developer ➔</a>
+    </div>
+</aside>
+<script>
+(function() {
+    var nav = document.getElementById("rmShowcaseNav");
+    if (nav) {
+        var active = nav.querySelector(".rm-showcase-pill.active");
+        if (active) {
+            setTimeout(function() {
+                var offset = active.offsetLeft - (nav.clientWidth / 2) + (active.clientWidth / 2);
+                nav.scrollTo({ left: Math.max(0, offset), behavior: "smooth" });
+            }, 150);
+        }
+    }
+})();
+</script>
+
+<!-- Header Navigation -->
+<header class="main-nav">
+    <div class="nav-inner">
+        <a href="#home" class="brand-logo">
+            <div class="logo-icon">🏎️</div>
+            <div class="logo-text">AUTOPRO DYNAMICS</div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#configurator">Dyno Estimator</a></li>
+            <li><a href="#gallery">Track & Garage</a></li>
+            <li><a href="#reviews">Telemetry</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-btn" onclick="toggleTheme()">
+                <span id="themeIcon">☀️</span>
+                <span id="themeLabel">Light Mode</span>
+            </button>
+            <button class="btn-primary" onclick="openBookingModal('General Auto Service')">Book Pitstop</button>
+        </div>
+    </div>
+</header>
+
+<!-- Cockpit Hero Section -->
+<section class="hero-cockpit" id="home">
+    <div class="hero-cockpit-grid">
+        <div class="hero-text-col">
+            <div class="tag-badge">
+                <span>🏁</span>
+                <span>CERTIFIED GERMAN & JAPANESE MOTORSPORT GARAGE</span>
+            </div>
+            <h1 class="hero-title">Precision <span class="gradient-text">Engineering</span> & Dyno Tuning</h1>
+            <p class="hero-sub">Tbilisi's official dealer-level diagnostics, ZF & DSG dual-clutch transmission rebuilding, and Stage 1-3 ECU power remaps with proven dyno charts.</p>
+            <div class="hero-btn-row">
+                <button class="btn-primary" onclick="openBookingModal('Diagnostics & Dyno Remap')">Schedule Diagnostic Scan ➔</button>
+                <a href="#configurator" class="btn-secondary">Calculate Stage Remap</a>
+            </div>
+            
+            <div class="telemetry-row">
+                <div class="tel-item">
+                    <b>4,800+</b>
+                    <span>Dyno Pulls</span>
+                </div>
+                <div class="tel-item">
+                    <b>15+</b>
+                    <span>Years Master Exp</span>
+                </div>
+                <div class="tel-item">
+                    <b>100%</b>
+                    <span>OEM German Parts</span>
+                </div>
+                <div class="tel-item">
+                    <b>4.95 ★</b>
+                    <span>Driver Choice</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual-col">
+            <div class="hero-frame-card">
+                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80" alt="AutoPro Dyno Lab" class="hero-main-img">
+                <div class="dyno-hud-card">
+                    <div>
+                        <div class="dyno-spec-title">Porsche 911 GT3 RS Calibration</div>
+                        <div class="dyno-spec-sub">+48 HP Stage 2 Live Map Confirmed</div>
+                    </div>
+                    <span class="dyno-badge">LIVE DYNO READY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Matrix Services Grid -->
+<section class="eng-section" id="services">
+    <div class="eng-container">
+        <div class="section-header">
+            <div class="tag-badge" style="margin-bottom:0.75rem">PRECISION WORKSHOP</div>
+            <h2>Full-Spectrum Automotive Engineering</h2>
+            <p>From factory scheduled maintenance to track-ready coilovers and micro-tolerance engine rebuilds.</p>
+        </div>
+
+        <div class="service-matrix">
+            <div class="matrix-card">
+                <div class="matrix-img-box">
+                    <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=600&q=80" alt="Diagnostics" class="matrix-img">
+                    <span class="matrix-tag">OEM SCAN</span>
+                </div>
+                <div class="matrix-content">
+                    <h3 class="matrix-title">Dealer ECU Diagnostics</h3>
+                    <p class="matrix-desc">Live CAN-bus sensor telemetry, misfire analysis, transmission adaptations, and fault code clearing.</p>
+                    <div class="matrix-foot">
+                        <span class="matrix-price">From 70 ₾</span>
+                        <button class="btn-book-sm" onclick="openBookingModal('Dealer ECU Diagnostics')">Book Scan ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-img-box">
+                    <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=600&q=80" alt="Engine Rebuild" class="matrix-img">
+                    <span class="matrix-tag">GERMAN TECH</span>
+                </div>
+                <div class="matrix-content">
+                    <h3 class="matrix-title">Engine & Gearbox Overhaul</h3>
+                    <p class="matrix-desc">Timing chain replacement, turbocharger rebuilds, and ZF 8HP / DSG clutch calibrations.</p>
+                    <div class="matrix-foot">
+                        <span class="matrix-price">From 350 ₾</span>
+                        <button class="btn-book-sm" onclick="openBookingModal('Engine & Gearbox Overhaul')">Book Rebuild ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-img-box">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" alt="Brakes" class="matrix-img">
+                    <span class="matrix-tag">BREMBO RACING</span>
+                </div>
+                <div class="matrix-content">
+                    <h3 class="matrix-title">Suspension & Big Brakes</h3>
+                    <p class="matrix-desc">Laser 3D 4-wheel alignment, Bilstein coilover setups, and slotted rotor upgrades.</p>
+                    <div class="matrix-foot">
+                        <span class="matrix-price">From 140 ₾</span>
+                        <button class="btn-book-sm" onclick="openBookingModal('Suspension & Big Brakes')">Book Setup ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-card">
+                <div class="matrix-img-box">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Stage 1 & 2 Tuning" class="matrix-img">
+                    <span class="matrix-tag">DYNO PROVEN</span>
+                </div>
+                <div class="matrix-content">
+                    <h3 class="matrix-title">Stage 1 & 2 Dyno Remaps</h3>
+                    <p class="matrix-desc">Horsepower and torque optimization, speed limiter removal, and exhaust pop & bang maps.</p>
+                    <div class="matrix-foot">
+                        <span class="matrix-price">From 450 ₾</span>
+                        <button class="btn-book-sm" onclick="openBookingModal('Stage 1 & 2 Dyno Remaps')">Book Tune ➔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interactive Dyno Stage Estimator -->
+<section class="dyno-section" id="configurator">
+    <div class="dyno-container">
+        <div class="section-header">
+            <div class="tag-badge" style="margin-bottom:0.75rem">INTERACTIVE ESTIMATOR</div>
+            <h2>Build Your Service & Tuning Package</h2>
+            <p>Select diagnostic procedures and performance packages for instant pricing.</p>
+        </div>
+
+        <div class="dyno-grid">
+            <div class="config-options-box">
+                <label class="dyno-option-row">
+                    <input type="checkbox" class="dyno-checkbox" value="110" checked onchange="calculateDynoTotal()">
+                    <span class="dyno-opt-label">Motul 300V Synthetic Oil & Mann Filter Change</span>
+                    <span class="dyno-opt-price">110 ₾</span>
+                </label>
+                <label class="dyno-option-row">
+                    <input type="checkbox" class="dyno-checkbox" value="70" checked onchange="calculateDynoTotal()">
+                    <span class="dyno-opt-label">Dealer-Level ECU Scanning & Live Sensor Telemetry</span>
+                    <span class="dyno-opt-price">70 ₾</span>
+                </label>
+                <label class="dyno-option-row">
+                    <input type="checkbox" class="dyno-checkbox" value="160" onchange="calculateDynoTotal()">
+                    <span class="dyno-opt-label">Front Axle Ceramic Brake Pads & Rotor Resurfacing</span>
+                    <span class="dyno-opt-price">160 ₾</span>
+                </label>
+                <label class="dyno-option-row">
+                    <input type="checkbox" class="dyno-checkbox" value="450" onchange="calculateDynoTotal()">
+                    <span class="dyno-opt-label">Stage 1 ECU Power Remap (Dyno Pulls Included)</span>
+                    <span class="dyno-opt-price">450 ₾</span>
+                </label>
+                <label class="dyno-option-row">
+                    <input type="checkbox" class="dyno-checkbox" value="180" onchange="calculateDynoTotal()">
+                    <span class="dyno-opt-label">Laser 3D Track Alignment & Bushing Inspection</span>
+                    <span class="dyno-opt-price">180 ₾</span>
+                </label>
+            </div>
+
+            <div class="dyno-calc-result">
+                <span class="calc-stage-badge">ESTIMATED INVESTMENT</span>
+                <div class="dyno-total-num" id="dynoTotal">180 ₾</div>
+                <div class="dyno-note">Transparent pricing with zero hidden surcharges. OEM parts guaranteed.</div>
+                <button class="btn-primary" style="width:100%" onclick="bookEstimatedPackage()">Lock In Estimated Price ➔</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+    <div class="eng-container">
+        <div class="section-header">
+            <div class="tag-badge" style="margin-bottom:0.75rem">PROJECT GALLERY</div>
+            <h2>Recent Track & Garage Builds</h2>
+            <p>From M-Power BMWs to AMG Mercedes and Porsche track machines in Tbilisi.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1613214149922-f1809c99b414?auto=format&fit=crop&w=800&q=80" alt="ECU Diagnostic Telemetry">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Live Dyno Sensor Calibration</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=800&q=80" alt="Brake Upgrades">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Slotted 6-Piston Caliper Fitment</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80" alt="Wheel Alignment">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Laser 3D Suspension Geometry</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Porsche Body Setup">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Custom Carbon Aerodynamics</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80" alt="Climate System">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">R134a Climate Compressor Overhaul</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=80" alt="Detailing">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Ceramic Shield Paint Protection</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="reviews-section" id="reviews">
+    <div class="eng-container">
+        <div class="section-header">
+            <div class="tag-badge" style="margin-bottom:0.75rem">DRIVER FEEDBACK</div>
+            <h2>Trusted by Performance Drivers</h2>
+            <p>Read real telemetry feedback from BMW M, Audi RS, and Mercedes AMG owners.</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-car-badge">🏎️ BMW M3 Competition (G80)</div>
+                <p class="review-quote">"AutoPro transformed my M3 with their Stage 2 tune and catless downpipe setup. Dyno verified +92hp with razor-sharp throttle response. Best garage in Georgia."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Levan M.">
+                    <div>
+                        <div style="font-weight:700">Levan Mamulashvili</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Tbilisi Motorsport Club</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-car-badge">🇩🇪 Audi RS6 Avant</div>
+                <p class="review-quote">"Had a transmission shudder issue that other shops wanted to charge 4,000 GEL for a full replacement. AutoPro diagnosed a solenoid fault and resolved it in 4 hours."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Nikoloz B.">
+                    <div>
+                        <div style="font-weight:700">Nikoloz Beridze</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Audi Quattro Club</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-car-badge">⚡ Porsche 911 Turbo S</div>
+                <p class="review-quote">"Their laser 3D alignment and Brembo carbon-ceramic pad setup transformed my track lap times at Rustavi International Motorpark. Genuine master mechanics."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Davit G.">
+                    <div>
+                        <div style="font-weight:700">Davit Gogoladze</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Trackday Driver</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <span class="f-brand-text">AutoPro Dynamics</span>
+                    </div>
+                    <p class="f-desc">Next-generation digital experience crafted with bespoke layout systems, accessible modern CSS, and fluid performance.</p>
+                    <div class="f-badge-row">
+                        <span class="f-badge">⚡ Ultra Fast</span>
+                        <span class="f-badge">📱 Responsive</span>
+                        <span class="f-badge">🎨 Bespoke UI</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Explore Demos</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://aquafix-sandy.vercel.app">AquaFix Emergency Plumbing</a></li>
+                        <li><a href="https://autopro-pi.vercel.app">AutoPro German Diagnostics</a></li>
+                        <li><a href="https://glowup-bice.vercel.app">GlowUp Beauty & Hair</a></li>
+                        <li><a href="https://sakartvelo-homes.vercel.app">Sakartvelo Prime Realty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Specialty Sectors</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://dentacare-hazel.vercel.app">DentaCare Digital Clinic</a></li>
+                        <li><a href="https://legalline.vercel.app">LegalLine Chambers</a></li>
+                        <li><a href="https://cleanpro-snowy-sigma.vercel.app">CleanPro Facilities</a></li>
+                        <li><a href="https://ironforge-bice.vercel.app">IronForge Athletic Lab</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col cta-col">
+                    <div class="f-hire-card">
+                        <div class="f-hire-icon">🚀</div>
+                        <h4>Need a Website Like This?</h4>
+                        <p>Turn your local business into a high-converting digital powerhouse with custom design.</p>
+                        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="f-hire-btn">Hire the Developer ➔</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 AutoPro Dynamics. All rights reserved.</p>
+                <div class="dev-attribution">
+                    Designed & Engineered by <a href="https://www.rommark.dev" target="_blank" rel="noopener">Rommark.Dev</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <!-- Booking Modal -->
+    <!-- AutoPro ECU Remap & Dyno Booking Modal -->
+    <div class="modal-backdrop" id="bookingModal" onclick="if(event.target===this)closeBookingModal()">
+        <div class="modal-card" style="max-width: 600px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title" id="modalTitle">Tuning Bay & ECU Calibration Booking</h3>
+                    <p class="modal-sub">Dyno-Cell Reservation & Telemetry Logging</p>
+                </div>
+                <button class="modal-close" onclick="closeBookingModal()" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <div id="dynoBookingStep">
+                <form onsubmit="startDynoSimulation(event)">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                        <div class="form-group">
+                            <label class="form-label">Vehicle Make & Model</label>
+                            <input type="text" class="form-input" id="carModel" value="BMW M3 Competition (G80)" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">ECU Software Level</label>
+                            <select class="form-input" id="tuningStage">
+                                <option value="Stage 1 Custom (+70 HP / +110 Nm)">Stage 1 Custom (+70 HP / +110 Nm)</option>
+                                <option value="Stage 2 Track (Downpipe + Catless, +125 HP)">Stage 2 Track (Downpipe, +125 HP)</option>
+                                <option value="TCU Transmission Flash (xHP)">TCU Transmission Flash (xHP)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Preferred Date & Dyno Slot</label>
+                        <input type="datetime-local" class="form-input" id="dynoDate" value="2026-08-22T14:30">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Pilot / Owner Contact</label>
+                        <input type="tel" class="form-input" id="driverPhone" value="+995 577 88 99 00" required>
+                    </div>
+
+                    <button type="submit" class="modal-submit-btn">🔥 Run Real-Time Dyno Telemetry Simulation ➔</button>
+                </form>
+            </div>
+
+            <div id="dynoRunStep" style="display:none;">
+                <div class="dyno-screen">
+                    <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:700; color:#ff3e3e;">
+                        <span>4WD SYNCHRONIZED DYNO CELL</span>
+                        <span id="dynoStatus">RUNNING 4TH GEAR PULL...</span>
+                    </div>
+                    
+                    <div class="dyno-bar-wrap">
+                        <div class="dyno-bar-fill" id="dynoRpmBar"></div>
+                    </div>
+
+                    <div class="dyno-gauges">
+                        <div class="gauge-box">
+                            <div class="gauge-val" id="dynoRpm">2,400</div>
+                            <div class="gauge-label">ENGINE RPM</div>
+                        </div>
+                        <div class="gauge-box">
+                            <div class="gauge-val" id="dynoHp">310</div>
+                            <div class="gauge-label">HORSEPOWER (WHP)</div>
+                        </div>
+                        <div class="gauge-box">
+                            <div class="gauge-val" id="dynoBoost">1.1 bar</div>
+                            <div class="gauge-label">TURBO BOOST</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.04); border:1px solid var(--border); padding:12px; border-radius:8px; font-size:13px; margin-bottom:15px; text-align:left;">
+                    🏁 <strong>Bay Reservation Confirmed:</strong> Dyno Cell #2 is allocated for <span id="confirmedCar" style="color:var(--text); font-weight:700;">BMW M3</span>. Calibration map prepared.
+                </div>
+
+                <button type="button" class="btn btn-primary" style="width:100%;" onclick="closeBookingModal()">Finalize & Return to Showcase</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-card" id="toastCard">
+        <span style="font-size:1.4rem">✅</span>
+        <div>
+            <div style="font-weight:700;font-size:0.95rem" id="toastTitle">Request Sent Successfully!</div>
+            <div style="font-size:0.82rem;opacity:0.85" id="toastDesc">Our specialist will contact you momentarily.</div>
+        </div>
+    </div>
+    
+
+<script>
+// Theme Switcher
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('autopro_theme', newTheme);
+    
+    document.getElementById('themeIcon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    document.getElementById('themeLabel').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+}
+
+// Interactive Dyno Calculator
+function calculateDynoTotal() {
+    const checkboxes = document.querySelectorAll('.dyno-checkbox:checked');
+    let sum = 0;
+    checkboxes.forEach(cb => {
+        sum += parseFloat(cb.value);
+    });
+    document.getElementById('dynoTotal').textContent = sum + ' ₾';
+}
+
+function bookEstimatedPackage() {
+    const checkboxes = document.querySelectorAll('.dyno-checkbox:checked');
+    let items = [];
+    checkboxes.forEach(cb => {
+        items.push(cb.parentElement.querySelector('.dyno-opt-label').textContent.trim());
+    });
+    const total = document.getElementById('dynoTotal').textContent;
+    openBookingModal('Selected Package (' + total + '): ' + items.join(', '));
+}
+
+// Modal Handlers
+
+function startDynoSimulation(e) {
+    e.preventDefault();
+    document.getElementById('dynoBookingStep').style.display = 'none';
+    document.getElementById('dynoRunStep').style.display = 'block';
+    
+    const car = document.getElementById('carModel').value;
+    document.getElementById('confirmedCar').textContent = car;
+    
+    let rpm = 2000;
+    let hp = 300;
+    let boost = 0.8;
+    const bar = document.getElementById('dynoRpmBar');
+    const rpmElem = document.getElementById('dynoRpm');
+    const hpElem = document.getElementById('dynoHp');
+    const boostElem = document.getElementById('dynoBoost');
+    const statusElem = document.getElementById('dynoStatus');
+    
+    const dynoInterval = setInterval(() => {
+        if (rpm < 7200) {
+            rpm += 260;
+            hp += 12;
+            boost = (0.8 + (hp / 450) * 1.3).toFixed(1);
+            let pct = ((rpm - 2000) / 5200) * 100;
+            bar.style.width = pct + '%';
+            rpmElem.textContent = rpm.toLocaleString();
+            hpElem.textContent = hp + ' WHP';
+            boostElem.textContent = boost + ' bar';
+        } else {
+            clearInterval(dynoInterval);
+            statusElem.textContent = 'PULL COMPLETE • MAP VERIFIED ✓';
+            statusElem.style.color = '#10b981';
+            hpElem.style.color = '#10b981';
+        }
+    }, 80);
+}
+
+function openBookingModal(serviceName) {
+    document.getElementById('dynoBookingStep').style.display = 'block';
+    document.getElementById('dynoRunStep').style.display = 'none';
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function _orig_openBookingModal(serviceName) {
+    document.getElementById('modalServiceInput').value = serviceName || '';
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function closeBookingModal() {
+    document.getElementById('bookingModal').classList.remove('show');
+}
+
+function handleModalSubmit(e) {
+    e.preventDefault();
+    closeBookingModal();
+    const toast = document.getElementById('toastCard');
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
+// Initialize
+(function init() {
+    const saved = localStorage.getItem('autopro_theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').textContent = saved === 'dark' ? '☀️' : '🌙';
+        document.getElementById('themeLabel').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+    calculateDynoTotal();
+})();
+</script>
+</body>
+</html>

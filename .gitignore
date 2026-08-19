@@ -1,0 +1,4 @@
+.vercel/
+*.token
+*.log
+.DS_Store

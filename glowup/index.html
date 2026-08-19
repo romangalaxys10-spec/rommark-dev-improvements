@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowUp Atelier — Luxury Aesthetics, Balayage & Botanical Skin Spa</title>
+<meta name="description" content="Tbilisi's Premier High-Fashion Beauty Studio for Custom Balayage, Clinical Hydrafacials, Japanese Head Spa & Editorial Makeup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f0a12;
+    --surface: #191220;
+    --surface-2: #241a2e;
+    --surface-3: #322540;
+    --border: #3b2c4c;
+    --text: #fdf4f8;
+    --text-muted: #c4b5d0;
+    --primary: #ec4899;
+    --primary-glow: rgba(236, 72, 153, 0.3);
+    --accent: #d946ef;
+    --gold: #eab308;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] {
+    --bg: #faf5f8;
+    --surface: #ffffff;
+    --surface-2: #f5ebf2;
+    --surface-3: #ebd9e5;
+    --border: #dfcad8;
+    --text: #20101d;
+    --text-muted: #6b5566;
+    --primary: #db2777;
+    --primary-glow: rgba(219, 39, 119, 0.2);
+    --accent: #c026d3;
+    --gold: #ca8a04;
+    --shadow: 0 12px 32px rgba(219, 39, 119, 0.08);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+}
+
+
+.hub-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.hub-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    overflow-x: auto;
+}
+.hub-pill {
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+.hub-pill:hover {
+    background: rgba(236, 72, 153, 0.25);
+    color: #ffffff;
+}
+.hub-pill.active {
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+}
+.hub-hire-btn {
+    background: #2563eb;
+    color: #ffffff;
+    padding: 0.3rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    white-space: nowrap;
+}
+.hub-hire-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.main-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 37px;
+    z-index: 990;
+}
+.nav-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 16px var(--primary-glow);
+}
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    font-family: var(--font-heading);
+    letter-spacing: 0.08em;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    list-style: none;
+}
+.nav-menu a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.nav-menu a:hover {
+    color: var(--primary);
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.theme-btn {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.5rem 0.85rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s;
+}
+.theme-btn:hover {
+    border-color: var(--primary);
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.75rem 1.6rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--primary-glow);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--primary-glow);
+}
+
+.hero-editorial {
+    position: relative;
+    padding: 5rem 1.5rem 6rem;
+    background: var(--bg);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
+.hero-editorial-grid {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+.atelier-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 9999px;
+    background: rgba(236, 72, 153, 0.12);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.hero-title {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.08;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+.hero-title em {
+    font-style: italic;
+    color: var(--primary);
+}
+.hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+    line-height: 1.7;
+}
+.hero-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.75rem 1.6rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.pillars-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+.pillar-item b {
+    display: block;
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+.pillar-item span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+.hero-arch-wrap {
+    position: relative;
+    border-radius: 200px 200px 20px 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.hero-arch-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+.hero-arch-wrap:hover .hero-arch-img {
+    transform: scale(1.05);
+}
+.floating-quote-pill {
+    position: absolute;
+    bottom: 24px;
+    left: 20px;
+    right: 20px;
+    background: rgba(15, 10, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem;
+    color: #ffffff;
+}
+.quote-artist {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.quote-text {
+    font-size: 0.95rem;
+    font-style: italic;
+    font-family: var(--font-heading);
+    margin-top: 0.2rem;
+}
+
+.menu-section {
+    padding: 6rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.menu-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+.section-header h2 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+.treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+.treatment-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.75rem;
+    align-items: center;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.treatment-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 16px 32px var(--primary-glow);
+}
+.treatment-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.treatment-body {
+    flex-grow: 1;
+}
+.treatment-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.treatment-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.treatment-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.treatment-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: var(--font-heading);
+}
+.btn-book-rose {
+    background: var(--surface-3);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.4rem 1.1rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-book-rose:hover {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+.builder-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.builder-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3.5rem;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.curate-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+}
+.curate-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.4rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.curate-row:hover {
+    border-color: var(--primary);
+}
+.curate-cb {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+    margin-right: 1.1rem;
+}
+.curate-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    flex-grow: 1;
+    font-family: var(--font-heading);
+}
+.curate-val {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: var(--font-heading);
+}
+
+.curate-summary {
+    background: var(--surface);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 16px 40px var(--primary-glow);
+}
+.curate-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 9999px;
+    background: rgba(236, 72, 153, 0.15);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.curate-sum-num {
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: var(--font-heading);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.curate-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.gallery-section {
+    padding: 6rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.gallery-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    height: 300px;
+}
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+.gallery-card:hover img {
+    transform: scale(1.07);
+}
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 10, 18, 0.9) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+.gallery-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: var(--font-heading);
+}
+
+.reviews-section {
+    padding: 6rem 1.5rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.2rem;
+}
+.review-stars {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.review-quote {
+    font-size: 1.15rem;
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.review-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+}
+
+.site-footer {
+    background: #08050a;
+    color: #f8fafc;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4.5rem 1.5rem 2rem;
+}
+.footer-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+}
+.f-brand-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: #ffffff;
+    letter-spacing: 0.05em;
+}
+.f-desc {
+    font-size: 0.9rem;
+    color: #c4b5d0;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.6;
+}
+.f-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.f-badge {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+.f-head {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.05em;
+}
+.f-ul {
+    list-style: none;
+}
+.f-ul li {
+    margin-bottom: 0.75rem;
+}
+.f-ul a {
+    color: #c4b5d0;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+.f-ul a:hover {
+    color: var(--primary);
+}
+.f-hire-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+.f-hire-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card h4 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.f-hire-card p {
+    font-size: 0.82rem;
+    color: #c4b5d0;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+.f-hire-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.65rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #7e6988;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.dev-attribution a {
+    color: #ec4899;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    padding: 1.5rem;
+}
+.modal-backdrop.show {
+    display: flex;
+}
+.modal-card {
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+}
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.modal-title {
+    font-size: 1.7rem;
+    font-family: var(--font-heading);
+    color: var(--text);
+}
+.modal-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.form-input {
+    width: 100%;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+.modal-submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 0.85rem;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toast-card {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #191220;
+    color: #ffffff;
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1200;
+    transform: translateY(150%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toast-card.show {
+    transform: translateY(0);
+}
+
+@media (max-width: 960px) {
+    .hero-editorial-grid, .builder-grid, .footer-grid, .treatments-grid, .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pillars-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .treatment-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .treatment-img {
+        width: 100%;
+        height: 180px;
+    }
+    .treatment-foot {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+
+/* ==========================================================================
+   UNIFIED ROMMARK.DEV PORTFOLIO TOP SLIDER BAR
+   ========================================================================== */
+@media (max-width: 900px) {
+    .rm-hub-subtitle {
+        display: none;
+    }
+}
+@media (max-width: 640px) {
+    .rm-portfolio-hub-inner {
+        padding: 0.35rem 0.6rem;
+        gap: 0.4rem;
+    }
+    .rm-hub-title, .rm-hub-subtitle {
+        display: none;
+    }
+    .rm-hub-arrow {
+        display: none;
+    }
+}
+
+/* === UNIFIED ROMMARK SHOWCASE TOPBAR === */
+.rm-showcase-bar {
+    background-color: #0b0f17 !important;
+    background: #0b0f17 !important;
+    border-bottom: 1px solid #1e293b !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.rm-showcase-bar * {
+    box-sizing: border-box !important;
+}
+.rm-showcase-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    height: 48px;
+}
+.rm-showcase-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #38bdf8 !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+.rm-showcase-label:hover {
+    opacity: 0.85;
+}
+.rm-showcase-label .rm-rocket {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+.rm-showcase-nav-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+.rm-showcase-nav-wrapper::before,
+.rm-showcase-nav-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+    pointer-events: none;
+    z-index: 2;
+}
+.rm-showcase-nav-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #0b0f17, rgba(11, 15, 23, 0));
+}
+.rm-showcase-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+}
+.rm-showcase-nav::-webkit-scrollbar {
+    display: none;
+}
+.rm-showcase-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+    background: #161f30 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #94a3b8 !important;
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    line-height: 1.2;
+}
+.rm-showcase-pill:hover {
+    background: #1e2c44 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-1px);
+}
+.rm-showcase-pill.active {
+    background: #ffffff !important;
+    color: #090d16 !important;
+    border-color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+.rm-showcase-hire {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.rm-showcase-hire:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+}
+@media (max-width: 640px) {
+    .rm-showcase-inner {
+        padding: 0.35rem 0.5rem;
+        gap: 0.5rem;
+    }
+    .rm-showcase-label {
+        font-size: 0.72rem;
+    }
+    .rm-showcase-hire {
+        display: none;
+    }
+}
+/* === END UNIFIED ROMMARK SHOWCASE TOPBAR === */
+
+
+/* GlowUp Advanced Reservation Wizard Styles */
+.res-step { display: none; }
+.res-step.active { display: block; animation: fadeIn 0.3s ease-out; }
+.res-progress { display: flex; justify-content: space-between; margin-bottom: 20px; position: relative; }
+.res-progress::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--border); z-index: 1; transform: translateY(-50%); }
+.res-progress-step { width: 32px; height: 32px; border-radius: 50%; background: var(--surface); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--text-muted); position: relative; z-index: 2; transition: all 0.3s ease; }
+.res-progress-step.active { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 0 12px rgba(224, 122, 95, 0.4); }
+.res-progress-step.completed { background: #10b981; border-color: #10b981; color: #fff; }
+.stylist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+@media (max-width: 600px) { .stylist-grid { grid-template-columns: 1fr; } }
+.stylist-card { border: 2px solid var(--border); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.2s ease; background: var(--surface); }
+.stylist-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.stylist-card.selected { border-color: var(--accent); background: rgba(224, 122, 95, 0.08); box-shadow: 0 4px 14px rgba(224, 122, 95, 0.15); }
+.stylist-img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; margin: 0 auto 8px; }
+.stylist-name { font-weight: 700; font-size: 14px; color: var(--text); }
+.stylist-title { font-size: 11px; color: var(--text-muted); }
+.time-slot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+@media (max-width: 500px) { .time-slot-grid { grid-template-columns: repeat(2, 1fr); } }
+.time-slot-btn { padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 13px; font-weight: 600; cursor: pointer; text-align: center; transition: all 0.2s ease; }
+.time-slot-btn:hover { border-color: var(--accent); }
+.time-slot-btn.selected { background: var(--accent); color: #fff; border-color: var(--accent); }
+.time-slot-btn.disabled { opacity: 0.4; cursor: not-allowed; text-decoration: line-through; }
+.booking-confirm-card { background: rgba(224, 122, 95, 0.06); border: 1px dashed var(--accent); border-radius: 12px; padding: 16px; margin: 15px 0; }
+.booking-confirm-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px; }
+.booking-confirm-label { color: var(--text-muted); }
+.booking-confirm-val { font-weight: 700; color: var(--text); }
+
+</style>
+</head>
+<body>
+<!-- Unified Rommark.Dev Showcase Bar -->
+<aside class="rm-showcase-bar" id="rmShowcaseBar">
+    <div class="rm-showcase-inner">
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-label">
+            <span class="rm-rocket">🚀</span> ROMMARK.DEV SHOWCASE:
+        </a>
+        <div class="rm-showcase-nav-wrapper">
+            <nav class="rm-showcase-nav" id="rmShowcaseNav">
+                <a href="https://aquafix-sandy.vercel.app" class="rm-showcase-pill">🚰 AquaFix</a><a href="https://autopro-pi.vercel.app" class="rm-showcase-pill">🏎️ AutoPro</a><a href="https://glowup-bice.vercel.app" class="rm-showcase-pill active">💄 GlowUp</a><a href="https://sakartvelo-homes.vercel.app" class="rm-showcase-pill">🏛️ Sakartvelo Homes</a><a href="https://dentacare-hazel.vercel.app" class="rm-showcase-pill">🦷 DentaCare</a><a href="https://legalline.vercel.app" class="rm-showcase-pill">⚖️ LegalLine</a><a href="https://cleanpro-snowy-sigma.vercel.app" class="rm-showcase-pill">✨ CleanPro</a><a href="https://ironforge-bice.vercel.app" class="rm-showcase-pill">🏋️ IronForge</a><a href="https://sweetest-house.vercel.app" class="rm-showcase-pill">🥐 Sweetest House</a><a href="https://techfix-five.vercel.app" class="rm-showcase-pill">📱 TechFix</a>
+            </nav>
+        </div>
+        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="rm-showcase-hire">Hire Developer ➔</a>
+    </div>
+</aside>
+<script>
+(function() {
+    var nav = document.getElementById("rmShowcaseNav");
+    if (nav) {
+        var active = nav.querySelector(".rm-showcase-pill.active");
+        if (active) {
+            setTimeout(function() {
+                var offset = active.offsetLeft - (nav.clientWidth / 2) + (active.clientWidth / 2);
+                nav.scrollTo({ left: Math.max(0, offset), behavior: "smooth" });
+            }, 150);
+        }
+    }
+})();
+</script>
+
+<header class="main-nav">
+    <div class="nav-inner">
+        <a href="#home" class="brand-logo">
+            <div class="logo-icon">💄</div>
+            <div class="logo-text">GLOWUP ATELIER</div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#services">Aesthetic Menu</a></li>
+            <li><a href="#curate">Custom Ritual</a></li>
+            <li><a href="#gallery">Editorial Portfolio</a></li>
+            <li><a href="#reviews">Vogue Praise</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-btn" onclick="toggleTheme()">
+                <span id="themeIcon">☀️</span>
+                <span id="themeLabel">Light Mode</span>
+            </button>
+            <button class="btn-primary" onclick="openBookingModal('Atelier Appointment')">Reserve Session</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero-editorial" id="home">
+    <div class="hero-editorial-grid">
+        <div class="hero-text-col">
+            <div class="atelier-badge">
+                <span>✨</span>
+                <span>HAUTE BEAUTÉ & BOTANICAL SKIN STUDIO</span>
+            </div>
+            <h1 class="hero-title">Elevating <em>Elegance</em>, Perfecting Skin</h1>
+            <p class="hero-sub">Tbilisi's destination atelier for bespoke dimensional balayage, organic Japanese scalp therapy, non-invasive hydrafacial sculpting, and editorial bridal artistry.</p>
+            <div class="hero-btn-row">
+                <button class="btn-primary" onclick="openBookingModal('Haute Beauté Session')">Book Private Atelier Session ➔</button>
+                <a href="#curate" class="btn-outline">Curate Treatment Ritual</a>
+            </div>
+            
+            <div class="pillars-row">
+                <div class="pillar-item">
+                    <b>12k+</b>
+                    <span>Clients Transformed</span>
+                </div>
+                <div class="pillar-item">
+                    <b>100%</b>
+                    <span>Organic Botanical</span>
+                </div>
+                <div class="pillar-item">
+                    <b>L’Oréal</b>
+                    <span>Master Colorists</span>
+                </div>
+                <div class="pillar-item">
+                    <b>4.98 ★</b>
+                    <span>Tbilisi Elite Rated</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual-col">
+            <div class="hero-arch-wrap">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="GlowUp Haute Studio" class="hero-arch-img">
+                <div class="floating-quote-pill">
+                    <div class="quote-artist">Artistic Director — Nino Chkheidze</div>
+                    <div class="quote-text">"Beauty is not conformity; it is luminous individuality brought to life."</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="menu-section" id="services">
+    <div class="menu-container">
+        <div class="section-header">
+            <div class="atelier-badge" style="margin-bottom:0.75rem">TREATMENT MENU</div>
+            <h2>Signature Atelier Rituals</h2>
+            <p>Formulated with French luxury botanicals and Japanese precision techniques.</p>
+        </div>
+
+        <div class="treatments-grid">
+            <div class="treatment-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Dimensional Balayage" class="treatment-img">
+                <div class="treatment-body">
+                    <h3 class="treatment-title">French Dimensional Balayage</h3>
+                    <p class="treatment-desc">Hand-painted seamless sun-kissed gradients with Olaplex molecular bond reconstruction.</p>
+                    <div class="treatment-foot">
+                        <span class="treatment-price">From 180 ₾</span>
+                        <button class="btn-book-rose" onclick="openBookingModal('French Dimensional Balayage')">Reserve ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatment-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Hydrafacial" class="treatment-img">
+                <div class="treatment-body">
+                    <h3 class="treatment-title">Diamond Glow Hydrafacial</h3>
+                    <p class="treatment-desc">Vortex pore-clearing suction with medical-grade hyaluronic and peptide infusion.</p>
+                    <div class="treatment-foot">
+                        <span class="treatment-price">From 140 ₾</span>
+                        <button class="btn-book-rose" onclick="openBookingModal('Diamond Glow Hydrafacial')">Reserve ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatment-card">
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Manicure" class="treatment-img">
+                <div class="treatment-body">
+                    <h3 class="treatment-title">Russian Medical Manicure</h3>
+                    <p class="treatment-desc">Precision diamond e-file cuticle detailing with long-lasting Japanese non-toxic builder gel.</p>
+                    <div class="treatment-foot">
+                        <span class="treatment-price">From 75 ₾</span>
+                        <button class="btn-book-rose" onclick="openBookingModal('Russian Medical Manicure')">Reserve ➔</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="treatment-card">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Bridal Artistry" class="treatment-img">
+                <div class="treatment-body">
+                    <h3 class="treatment-title">Editorial & Bridal Artistry</h3>
+                    <p class="treatment-desc">Airbrush foundation sculpting, silk lash cluster placement, and 18-hour setting technique.</p>
+                    <div class="treatment-foot">
+                        <span class="treatment-price">From 160 ₾</span>
+                        <button class="btn-book-rose" onclick="openBookingModal('Editorial & Bridal Artistry')">Reserve ➔</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="builder-section" id="curate">
+    <div class="builder-grid">
+        <div class="curate-box">
+            <h3 style="font-size:2rem;margin-bottom:1.5rem;font-family:var(--font-heading)">Curate Your Private Atelier Package</h3>
+            <label class="curate-row">
+                <input type="checkbox" class="curate-cb" value="180" checked onchange="calculateCurateTotal()">
+                <span class="curate-label">French Balayage & Gloss Glaze</span>
+                <span class="curate-val">180 ₾</span>
+            </label>
+            <label class="curate-row">
+                <input type="checkbox" class="curate-cb" value="140" checked onchange="calculateCurateTotal()">
+                <span class="curate-label">Diamond Hydrafacial & LED Therapy</span>
+                <span class="curate-val">140 ₾</span>
+            </label>
+            <label class="curate-row">
+                <input type="checkbox" class="curate-cb" value="75" onchange="calculateCurateTotal()">
+                <span class="curate-label">Russian E-File Gel Manicure</span>
+                <span class="curate-val">75 ₾</span>
+            </label>
+            <label class="curate-row">
+                <input type="checkbox" class="curate-cb" value="95" onchange="calculateCurateTotal()">
+                <span class="curate-label">Japanese Scalp Spa & Blowout</span>
+                <span class="curate-val">95 ₾</span>
+            </label>
+        </div>
+
+        <div class="curate-summary">
+            <span class="curate-badge">BESPOKE RITUAL INVESTMENT</span>
+            <div class="curate-sum-num" id="curateTotal">320 ₾</div>
+            <div class="curate-note">Includes complimentary champagne and private botanical VIP suite.</div>
+            <button class="btn-primary" style="width:100%" onclick="bookCuratedPackage()">Reserve Curated Package ➔</button>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+    <div class="menu-container">
+        <div class="section-header">
+            <div class="atelier-badge" style="margin-bottom:0.75rem">PORTFOLIO</div>
+            <h2>Editorial Showcase</h2>
+            <p>Real transformations created inside our Vera, Tbilisi salon.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Haute Balayage">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Golden Amber Balayage</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80" alt="Russian Gel Art">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Minimalist Nude Gel Polish</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Bridal Glow">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Dewy Velvet Bridal Glamour</div>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Hydrafacial Glow">
+                <div class="gallery-overlay">
+                    <div class="gallery-title">Glass Skin Lymphatic Lift</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+    <div class="menu-container">
+        <div class="section-header">
+            <div class="atelier-badge" style="margin-bottom:0.75rem">PRAISE</div>
+            <h2>What Our Clients Say</h2>
+            <p>Loved by fashion editors, brides, and beauty enthusiasts.</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Nino and the GlowUp team did my bridal hair and makeup. I have never felt more radiant in my life. The look stayed immaculate from 10 AM until late midnight."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Salome K.">
+                    <div>
+                        <div style="font-weight:700">Salome Kalandadze</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Fashion Designer</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"The Japanese Head Spa and Diamond Hydrafacial are life changing. The serene VIP suite and organic botanicals melt away every ounce of city stress."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Elena T.">
+                    <div>
+                        <div style="font-weight:700">Elena Tskhakaia</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Creative Director</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-quote">"Finding a salon that does authentic French balayage without brassy undertones is rare. GlowUp is master tier. My hair is healthier now than before coloring."</p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" class="review-avatar" alt="Mariam B.">
+                    <div>
+                        <div style="font-weight:700">Mariam Beridze</div>
+                        <div style="font-size:0.8rem;color:var(--text-muted)">Architect</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <span class="f-brand-text">GlowUp Atelier</span>
+                    </div>
+                    <p class="f-desc">Next-generation digital experience crafted with bespoke layout systems, accessible modern CSS, and fluid performance.</p>
+                    <div class="f-badge-row">
+                        <span class="f-badge">⚡ Ultra Fast</span>
+                        <span class="f-badge">📱 Responsive</span>
+                        <span class="f-badge">🎨 Bespoke UI</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Explore Demos</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://aquafix-sandy.vercel.app">AquaFix Emergency Plumbing</a></li>
+                        <li><a href="https://autopro-pi.vercel.app">AutoPro German Diagnostics</a></li>
+                        <li><a href="https://glowup-bice.vercel.app">GlowUp Beauty & Hair</a></li>
+                        <li><a href="https://sakartvelo-homes.vercel.app">Sakartvelo Prime Realty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="f-head">Specialty Sectors</h4>
+                    <ul class="f-ul">
+                        <li><a href="https://dentacare-hazel.vercel.app">DentaCare Digital Clinic</a></li>
+                        <li><a href="https://legalline.vercel.app">LegalLine Chambers</a></li>
+                        <li><a href="https://cleanpro-snowy-sigma.vercel.app">CleanPro Facilities</a></li>
+                        <li><a href="https://ironforge-bice.vercel.app">IronForge Athletic Lab</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col cta-col">
+                    <div class="f-hire-card">
+                        <div class="f-hire-icon">🚀</div>
+                        <h4>Need a Website Like This?</h4>
+                        <p>Turn your local business into a high-converting digital powerhouse with custom design.</p>
+                        <a href="https://www.rommark.dev" target="_blank" rel="noopener" class="f-hire-btn">Hire the Developer ➔</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 GlowUp Atelier. All rights reserved.</p>
+                <div class="dev-attribution">
+                    Designed & Engineered by <a href="https://www.rommark.dev" target="_blank" rel="noopener">Rommark.Dev</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <!-- Booking Modal -->
+    <!-- Multi-Step Atelier Reservation Modal -->
+    <div class="modal-backdrop" id="bookingModal" onclick="if(event.target===this)closeBookingModal()">
+        <div class="modal-card" style="max-width: 600px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title" id="modalTitle">Atelier VIP Reservation System</h3>
+                    <p class="modal-sub">Live Real-Time Appointment & Specialist Dispatch</p>
+                </div>
+                <button class="modal-close" onclick="closeBookingModal()" aria-label="Close modal">&times;</button>
+            </div>
+
+            <div class="res-progress">
+                <div class="res-progress-step active" id="prog1">1</div>
+                <div class="res-progress-step" id="prog2">2</div>
+                <div class="res-progress-step" id="prog3">3</div>
+                <div class="res-progress-step" id="prog4">✓</div>
+            </div>
+
+            <!-- Step 1: Select Stylist & Ritual -->
+            <div class="res-step active" id="step1">
+                <label class="form-label" style="font-weight:700;">Select Your Master Artisan</label>
+                <div class="stylist-grid">
+                    <div class="stylist-card selected" onclick="selectStylist(this, 'Elena Rostova', 'Creative Color Director')">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena" class="stylist-img">
+                        <div class="stylist-name">Elena Rostova</div>
+                        <div class="stylist-title">Color Director</div>
+                    </div>
+                    <div class="stylist-card" onclick="selectStylist(this, 'Sophie Laurent', 'Parisian Hair Couturière')">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sophie" class="stylist-img">
+                        <div class="stylist-name">Sophie Laurent</div>
+                        <div class="stylist-title">Hair Couturière</div>
+                    </div>
+                    <div class="stylist-card" onclick="selectStylist(this, 'Nino Kalandadze', 'Senior Dermal Specialist')">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Nino" class="stylist-img">
+                        <div class="stylist-name">Nino Kalandadze</div>
+                        <div class="stylist-title">Skin Specialist</div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top:15px;">
+                    <label class="form-label">Chosen Atelier Service / Ritual</label>
+                    <input type="text" class="form-input" id="modalServiceInput" value="French Balayage & Olaplex Glaze" placeholder="Custom Service or Ritual">
+                </div>
+                <button type="button" class="modal-submit-btn" onclick="goToStep(2)">Continue to Date & Time Selection ➔</button>
+            </div>
+
+            <!-- Step 2: Date & Time Picker -->
+            <div class="res-step" id="step2">
+                <div class="form-group">
+                    <label class="form-label">Preferred Date</label>
+                    <input type="date" class="form-input" id="resDate" min="2026-08-20" value="2026-08-21">
+                </div>
+                <label class="form-label">Available VIP Slots (Live Updated)</label>
+                <div class="time-slot-grid">
+                    <div class="time-slot-btn" onclick="selectSlot(this)">10:30 AM</div>
+                    <div class="time-slot-btn selected" onclick="selectSlot(this)">12:00 PM</div>
+                    <div class="time-slot-btn" onclick="selectSlot(this)">02:15 PM</div>
+                    <div class="time-slot-btn disabled">04:00 PM (Booked)</div>
+                    <div class="time-slot-btn" onclick="selectSlot(this)">05:30 PM</div>
+                    <div class="time-slot-btn" onclick="selectSlot(this)">07:00 PM</div>
+                    <div class="time-slot-btn" onclick="selectSlot(this)">08:15 PM</div>
+                </div>
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                    <button type="button" class="btn" style="background:var(--surface); border:1px solid var(--border); flex:1;" onclick="goToStep(1)">← Back</button>
+                    <button type="button" class="modal-submit-btn" style="flex:2;" onclick="goToStep(3)">Enter Guest Details ➔</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Guest Info & Confirm -->
+            <div class="res-step" id="step3">
+                <form onsubmit="handleReservationSubmit(event)">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" id="guestName" placeholder="e.g. Tamar Dadiani" required value="Tamar Dadiani">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">WhatsApp / Phone</label>
+                        <input type="tel" class="form-input" id="guestPhone" placeholder="+995 599 00 00 00" required value="+995 599 12 34 56">
+                    </div>
+                    
+                    <div class="booking-confirm-card">
+                        <div class="booking-confirm-row">
+                            <span class="booking-confirm-label">Artisan:</span>
+                            <span class="booking-confirm-val" id="summaryStylist">Elena Rostova</span>
+                        </div>
+                        <div class="booking-confirm-row">
+                            <span class="booking-confirm-label">Service:</span>
+                            <span class="booking-confirm-val" id="summaryService">French Balayage</span>
+                        </div>
+                        <div class="booking-confirm-row">
+                            <span class="booking-confirm-label">Schedule:</span>
+                            <span class="booking-confirm-val" id="summaryTime">Aug 21, 2026 at 12:00 PM</span>
+                        </div>
+                        <div class="booking-confirm-row" style="border-top:1px solid rgba(224,122,95,0.2); padding-top:6px; margin-top:6px;">
+                            <span class="booking-confirm-label">Booking Status:</span>
+                            <span class="booking-confirm-val" style="color:#10b981;">⚡ Instant VIP Slot Reserved</span>
+                        </div>
+                    </div>
+                    
+                    <div style="display:flex; gap:10px; margin-top:15px;">
+                        <button type="button" class="btn" style="background:var(--surface); border:1px solid var(--border); flex:1;" onclick="goToStep(2)">← Back</button>
+                        <button type="submit" class="modal-submit-btn" style="flex:2;">Confirm Atelier Appointment ➔</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Success Instant Confirmation -->
+            <div class="res-step" id="step4" style="text-align:center; padding: 20px 0;">
+                <div style="width:64px; height:64px; border-radius:50%; background:rgba(16,185,129,0.15); color:#10b981; font-size:32px; display:flex; align-items:center; justify-content:center; margin: 0 auto 15px;">✓</div>
+                <h3 style="font-size:22px; margin-bottom:8px;">Reservation Confirmed!</h3>
+                <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">A VIP concierge confirmation SMS and calendar invite has been simulated to your device.</p>
+                <div class="booking-confirm-card" style="text-align:left;">
+                    <div class="booking-confirm-row">
+                        <span class="booking-confirm-label">Booking Reference:</span>
+                        <span class="booking-confirm-val" id="resRef">#GLOW-92841</span>
+                    </div>
+                    <div class="booking-confirm-row">
+                        <span class="booking-confirm-label">Client:</span>
+                        <span class="booking-confirm-val" id="finalGuestName">Tamar Dadiani</span>
+                    </div>
+                    <div class="booking-confirm-row">
+                        <span class="booking-confirm-label">Location:</span>
+                        <span class="booking-confirm-val">Abashidze St. 34, Vake, Tbilisi</span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" style="width:100%; margin-top:15px;" onclick="closeBookingModal()">Done & Back to Showcase</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-card" id="toastCard">
+        <span style="font-size:1.4rem">✅</span>
+        <div>
+            <div style="font-weight:700;font-size:0.95rem" id="toastTitle">Request Sent Successfully!</div>
+            <div style="font-size:0.82rem;opacity:0.85" id="toastDesc">Our specialist will contact you momentarily.</div>
+        </div>
+    </div>
+    
+
+<script>
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const newTheme = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('glowup_theme', newTheme);
+    
+    document.getElementById('themeIcon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    document.getElementById('themeLabel').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+}
+
+function calculateCurateTotal() {
+    const checkboxes = document.querySelectorAll('.curate-cb:checked');
+    let sum = 0;
+    checkboxes.forEach(cb => {
+        sum += parseFloat(cb.value);
+    });
+    document.getElementById('curateTotal').textContent = sum + ' ₾';
+}
+
+function bookCuratedPackage() {
+    const checkboxes = document.querySelectorAll('.curate-cb:checked');
+    let items = [];
+    checkboxes.forEach(cb => {
+        items.push(cb.parentElement.querySelector('.curate-label').textContent.trim());
+    });
+    const total = document.getElementById('curateTotal').textContent;
+    openBookingModal('Curated Ritual (' + total + '): ' + items.join(', '));
+}
+
+
+let currentStylist = "Elena Rostova";
+let currentSlot = "12:00 PM";
+
+function selectStylist(elem, name, title) {
+    document.querySelectorAll('.stylist-card').forEach(c => c.classList.remove('selected'));
+    elem.classList.add('selected');
+    currentStylist = name;
+}
+
+function selectSlot(elem) {
+    if (elem.classList.contains('disabled')) return;
+    document.querySelectorAll('.time-slot-btn').forEach(b => b.classList.remove('selected'));
+    elem.classList.add('selected');
+    currentSlot = elem.textContent.trim();
+}
+
+function goToStep(step) {
+    document.querySelectorAll('.res-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step' + step).classList.add('active');
+    
+    for (let i = 1; i <= 4; i++) {
+        const p = document.getElementById('prog' + i);
+        if (i < step) { p.className = 'res-progress-step completed'; }
+        else if (i === step) { p.className = 'res-progress-step active'; }
+        else { p.className = 'res-progress-step'; }
+    }
+    
+    if (step === 3) {
+        document.getElementById('summaryStylist').textContent = currentStylist;
+        document.getElementById('summaryService').textContent = document.getElementById('modalServiceInput').value || 'Custom Ritual';
+        const d = document.getElementById('resDate').value;
+        document.getElementById('summaryTime').textContent = (d ? d : 'Aug 21, 2026') + ' at ' + currentSlot;
+    }
+}
+
+function handleReservationSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('guestName').value;
+    document.getElementById('finalGuestName').textContent = name;
+    document.getElementById('resRef').textContent = '#GLOW-' + Math.floor(10000 + Math.random() * 90000);
+    goToStep(4);
+}
+
+function openBookingModal(serviceName) {
+    if (serviceName) {
+        document.getElementById('modalServiceInput').value = serviceName;
+    }
+    goToStep(1);
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function _orig_openBookingModal(serviceName) {
+    document.getElementById('modalServiceInput').value = serviceName || '';
+    document.getElementById('bookingModal').classList.add('show');
+}
+
+function closeBookingModal() {
+    document.getElementById('bookingModal').classList.remove('show');
+}
+
+function handleModalSubmit(e) {
+    e.preventDefault();
+    closeBookingModal();
+    const toast = document.getElementById('toastCard');
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 4000);
+}
+
+(function init() {
+    const saved = localStorage.getItem('glowup_theme');
+    if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+        document.getElementById('themeIcon').textContent = saved === 'dark' ? '☀️' : '🌙';
+        document.getElementById('themeLabel').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+    }
+    calculateCurateTotal();
+})();
+</script>
+</body>
+</html>
